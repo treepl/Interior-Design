@@ -15,33 +15,33 @@ var autoprefixerList = [
 
 var path = {
     build: {
-        html: 'assets/build/',
-        js: 'assets/build/js/',
-        css: 'assets/build/css/',
-        img: 'assets/build/img/',
-        fonts: 'assets/build/fonts/'
+        html: 'build/',
+        js: 'build/js/',
+        css: 'build/css/',
+        img: 'build/img/',
+        fonts: 'build/fonts/'
     },
     src: {
-        html: 'assets/src/*.html',
-        js: 'assets/src/js/main.js',
-        style: 'assets/src/style/main.scss',
-        img: 'assets/src/img/**/*.*',
-        fonts: 'assets/src/fonts/**/*.*'
+        html: 'src/*.html',
+        js: 'src/js/main.js',
+        style: 'src/scss/main.scss',
+        img: 'src/img/**/*.*',
+        fonts: 'src/fonts/**/*.*'
     },
     watch: {
-        html: 'assets/src/**/*.html',
-        js: 'assets/src/js/**/*.js',
-        css: 'assets/src/style/**/*.scss',
-        img: 'assets/src/img/**/*.*',
-        fonts: 'assets/srs/fonts/**/*.*'
+        html: 'src/**/*.html',
+        js: 'src/js/**/*.js',
+        css: 'src/scss/**/*.scss',
+        img: 'src/img/**/*.*',
+        fonts: 'srs/fonts/**/*.*'
     },
-    clean: './assets/build/*'
+    clean: './build/*'
 };
 
 
 var config = {
     server: {
-        baseDir: './assets/build'
+        baseDir: './build'
     },
     notify: false
 };

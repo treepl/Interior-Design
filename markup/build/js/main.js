@@ -18198,4 +18198,4 @@ return Popper;
 }));
 //# sourceMappingURL=toast.js.map
 
-// Import other js-файлы
+// Import other js-files
