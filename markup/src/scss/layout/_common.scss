@@ -1,0 +1,16 @@
+#wrapper{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+#header.sticky+#main {
+    // @include media(">md") {
+    //     padding-top: 56px;
+    // }
+}
+
+#main {
+    overflow: hidden;
+    flex: 1;
+}
