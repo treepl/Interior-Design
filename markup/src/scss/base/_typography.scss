@@ -1,0 +1,59 @@
+h2,
+.h2 {
+    // text-transform: uppercase;
+    // margin-bottom: 0.8rem;
+    font-weight: 500;
+}
+h3,
+.h3,
+h4,
+.h4
+h5,
+.h5{
+    font-family: $font-family-base;
+}
+
+h4,
+.h4 {
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+}
+
+
+ul:not([class]) {
+    padding-left: 24px;
+
+    li {
+        list-style-type: none;
+        position: relative;
+        padding-left: 24px;
+        margin-bottom: 13px; 
+
+        &:before {
+            @include size(10px);
+            content: '';
+            border: 1px solid $primary;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 7px;
+            
+
+        }
+
+    }
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+.blockquote-footer{
+    font-size: $font-size-lg;
+    
+    cite{
+        font-style: normal;
+    }
+}

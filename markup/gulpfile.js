@@ -15,33 +15,35 @@ var autoprefixerList = [
 
 var path = {
     build: {
-        html: 'build/',
-        js: 'build/js/',
-        css: 'build/css/',
-        img: 'build/img/',
-        fonts: 'build/fonts/'
+        html: 'dist/',
+        js: 'dist/js/',
+        css: 'dist/css/',
+        img: 'dist/images/',
+        fonts: 'dist/fonts/'
     },
     src: {
         html: 'src/*.html',
         js: 'src/js/main.js',
         style: 'src/scss/main.scss',
-        img: 'src/img/**/*.*',
+        img: 'src/sourceimages/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },
     watch: {
         html: 'src/**/*.html',
         js: 'src/js/**/*.js',
         css: 'src/scss/**/*.scss',
-        img: 'src/img/**/*.*',
+        img: 'src/sourceimages/**/*.*',
         fonts: 'srs/fonts/**/*.*'
     },
-    clean: './build/*'
+    clean: './dist/*'
 };
 
 
 var config = {
     server: {
-        baseDir: './build'
+        baseDir: './dist',
+        index: "index.html",
+        directory: true
     },
     notify: false
 };
@@ -96,6 +98,19 @@ gulp.task('css:build', function () {
         .pipe(webserver.reload({ stream: true })); 
 });
 
+gulp.task('css:dist', function () {
+    return gulp.src(path.src.style) 
+        .pipe(plumber()) 
+        .pipe(sass()) 
+        .pipe(autoprefixer({ 
+            browsers: autoprefixerList
+        }))
+        .pipe(gulp.dest(path.build.css))
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(cleanCSS()) 
+        .pipe(gulp.dest(path.build.css)) 
+});
+
 
 gulp.task('js:build', function () {
     return gulp.src(path.src.js) 
@@ -108,6 +123,16 @@ gulp.task('js:build', function () {
         .pipe(sourcemaps.write('./')) 
         .pipe(gulp.dest(path.build.js)) 
         .pipe(webserver.reload({ stream: true })); 
+});
+
+gulp.task('js:dist', function () {
+    return gulp.src(path.src.js) 
+        .pipe(plumber()) 
+        .pipe(rigger()) 
+        .pipe(gulp.dest(path.build.js))
+        .pipe(rename({ suffix: '.min' }))
+        .pipe(uglify()) 
+        .pipe(gulp.dest(path.build.js)) 
 });
 
 
@@ -150,6 +175,18 @@ gulp.task('build',
             'html:build',
             'css:build',
             'js:build',
+            'fonts:build',
+            'image:build'
+        )
+    )
+);
+
+gulp.task('dist',
+    gulp.series('clean:build',
+        gulp.parallel(
+            'html:build',
+            'css:dist',
+            'js:dist',
             'fonts:build',
             'image:build'
         )

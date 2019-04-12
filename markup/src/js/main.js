@@ -19,4 +19,5 @@
 //= ../../node_modules/bootstrap/js/dist/toast.js
 
 // Import other js-files
-//= my.js
+//= plugins.js
+//= inits.js
