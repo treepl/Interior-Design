@@ -257,7 +257,7 @@ $animation-speed: .3s !default;
 /// }
 
 @mixin rem-font-size($pxSize) {
-  font-size: $pxSize;
+  // font-size: $pxSize;
   font-size: ($pxSize / 16px) + rem;
 }
 

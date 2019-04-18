@@ -23,7 +23,7 @@ var path = {
     },
     src: {
         html: 'src/*.html',
-        js: 'src/js/main.js',
+        js: 'src/js/*.js',
         style: 'src/scss/main.scss',
         img: 'src/sourceimages/**/*.*',
         fonts: 'src/fonts/**/*.*'
@@ -45,7 +45,7 @@ var config = {
         index: "index.html",
         directory: true
     },
-    notify: false
+    notify: true
 };
 
 
@@ -62,7 +62,7 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'), 
     jpegrecompress = require('imagemin-jpeg-recompress'), 
     pngquant = require('imagemin-pngquant'), 
-    rimraf = require('gulp-rimraf'), 
+    rimraf = require('gulp-rimraf'),
     rename = require('gulp-rename');
 
 

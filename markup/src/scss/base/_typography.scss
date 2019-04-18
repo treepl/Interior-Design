@@ -1,22 +1,21 @@
+h1,
+.h1 {
+    text-transform: uppercase;
+}
+
 h2,
 .h2 {
-    // text-transform: uppercase;
+    text-transform: uppercase;  
+    
     // margin-bottom: 0.8rem;
-    font-weight: 500;
 }
-h3,
-.h3,
-h4,
-.h4
-h5,
-.h5{
-    font-family: $font-family-base;
-}
+
+
 
 h4,
 .h4 {
-    text-transform: uppercase;
-    margin-bottom: 0.8rem;
+    text-transform: uppercase; 
+    // margin-bottom: 0.8rem;
 }
 
 
@@ -27,7 +26,7 @@ ul:not([class]) {
         list-style-type: none;
         position: relative;
         padding-left: 24px;
-        margin-bottom: 13px; 
+        margin-bottom: 13px;
 
         &:before {
             @include size(10px);
@@ -37,23 +36,23 @@ ul:not([class]) {
             position: absolute;
             left: 0;
             top: 7px;
-            
+
 
         }
 
     }
 }
 
-img{
+img {
     max-width: 100%;
     height: auto;
 }
 
 
-.blockquote-footer{
+.blockquote-footer {
     font-size: $font-size-lg;
-    
-    cite{
+
+    cite {
         font-style: normal;
     }
 }
