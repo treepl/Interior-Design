@@ -125,7 +125,7 @@ gulp.task('js:build', function () {
         .pipe(webserver.reload({ stream: true })); 
 });
 
-gulp.task('js:dist', function () {
+gulp.task('js:dist',  function () {
     return gulp.src(path.src.js) 
         .pipe(plumber()) 
         .pipe(rigger()) 
