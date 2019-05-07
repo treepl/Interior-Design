@@ -39,3 +39,92 @@
 .carousel-indicators li {
     border-radius: 50%; 
 }
+
+
+.custom-carousel{
+    position: relative;
+    margin-bottom: 41px;
+    padding: 0 30px 1px;
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: 71px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding: 0;
+    }
+
+    .slideset,
+    .slide{
+        display: flex;
+    }
+
+    .bx-pager {
+        font-size: 0;
+        line-height: 0;
+        text-align: center;
+        position: absolute;
+        bottom: -30px;
+        left: 0;
+        right: 0;
+
+        @include media-breakpoint-up(lg) {
+            bottom: -60px;
+        }
+
+
+
+        .bx-pager-item {
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 10px;
+        }
+
+        .bx-pager-link {
+            @include size(10px);
+            display: inline-block;
+            vertical-align: top;
+            background: #bcbcbc;
+            border-radius: 50%;
+
+            &.active {
+                background: $gray-500;
+            }
+        }
+    }
+    .controls {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 1290px;
+        width: 100vw;
+        display: flex;
+        justify-content: space-between;
+        pointer-events: none;
+
+    }
+
+    .btn-next,
+    .btn-prev {
+        text-decoration: none;
+        color: $black;
+        font-size: 30px;
+        pointer-events: auto;
+
+        @include media-breakpoint-up(lg) {
+            font-size: 50px;
+        }
+
+    }
+
+    .btn-prev {
+        left: 10px;
+
+    }
+
+    .btn-next {
+        right: 10px;
+
+    }
+}

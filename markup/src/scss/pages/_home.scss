@@ -76,9 +76,6 @@
 }
 
 .team-slider {
-    .slide {
-        width: 25%;
-    }
 
     .card {
         position: relative;
@@ -109,15 +106,15 @@
         justify-content: center;
         background: rgba($black, 0.7);
         padding: 1.85rem 2.1rem;
-        // opacity: 0;
+        opacity: 0;
 
     }
 
     .card-title {
         margin-bottom: 0;
         text-align: center;
-    }
 
+    }
 
     .info {
         @extend %listreset;
@@ -138,5 +135,61 @@
 
     a {
         color: inherit;
+    }
+}
+
+.banner{
+    background-size: cover;
+    padding: 46px 0;
+
+    .value{
+        display: block;
+        margin-bottom: 0;
+        
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 10px;
+        }
+    }
+
+    p{
+        
+        @include media-breakpoint-up(lg) {
+            margin: 0;
+        }
+    }
+}
+
+.testimonials-slider{
+    
+
+    .card{
+        padding: rem(25) rem(15);
+
+        @include media-breakpoint-up(lg) {
+            padding: rem(25) 0;
+        }
+    }
+
+    .card-body{
+        padding: rem(16) 0;
+
+        
+    }
+
+    .name,
+    .position{
+        display: block;
+    }
+
+    .name{
+        font-size: rem(18);
+        margin-bottom: rem(13);
+    }
+    
+    img{
+        display:inline-block;
+        vertical-align:top;
+        margin-bottom: rem(12);
+        
     }
 }

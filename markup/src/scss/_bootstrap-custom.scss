@@ -53,7 +53,7 @@ BlinkMacSystemFont,
 Roboto,
 "Helvetica Neue",
 Arial,
-sans-serif,
+sans-serif, 
 "Apple Color Emoji",
 "Segoe UI Emoji",
 "Segoe UI Symbol",
@@ -114,6 +114,8 @@ $dropdown-item-padding-y: 0.6rem;
 $dropdown-item-padding-x: 1.2rem;
 
 $dropdown-border-width: 0;
+$dropdown-bg: $white;
+$dropdown-link-color: $black;
 
  
 

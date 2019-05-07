@@ -261,3 +261,15 @@ $animation-speed: .3s !default;
   font-size: ($pxSize / 16px) + rem;
 }
 
+$baseFontSize : 16;
+@function rem($pixels, $context: $baseFontSize) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1rem;
+}

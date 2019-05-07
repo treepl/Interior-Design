@@ -1,5 +1,7 @@
 jQuery(function () {
     initCardsSorting();
+    initCustomInfoCarousel();
+    initCustomTextCarousel();
 });
 // $('.dropdown-toggle').dropdown();
 
@@ -38,6 +40,84 @@ function initCardsSorting() {
             });
 
             $('a.masonryGalleryLightbox').fancybox(); 
+        }
+    }
+}
+
+function initCustomInfoCarousel() {
+    var condition = $('.teamSliderHolder').size()
+        // && false
+        ;init(condition);
+
+    function init(condition) {
+        if(condition || condition == null) {
+
+            var carouselGallerySlider = $('.teamSliderHolder .slideset').bxSlider({
+                slideSelector : $('.teamSliderHolder .slide'),
+                pager : true,
+                controls : false,
+                auto : false,
+                touchEnabled: false,
+                minSlides: 1,
+                maxSlides: 4,
+                moveSlides: 1,
+                slideWidth: 270,
+                shrinkItems: true,
+                slideMargin : 30,
+                infiniteLoop : true
+            });
+
+            $('.teamSliderHolder .btn-next').click(function() {
+                carouselGallerySlider.goToNextSlide();
+
+                return false;
+            });
+
+            $('.teamSliderHolder .btn-prev').click(function() {
+                carouselGallerySlider.goToPrevSlide();
+
+                return false;
+            });
+
+        }
+    }
+}
+
+function initCustomTextCarousel() {
+    var condition = $('.textSliderHolder').size()
+        // && false
+        ;init(condition);
+
+    function init(condition) {
+        if(condition || condition == null) {
+
+            var carouselGallerySlider = $('.textSliderHolder .slideset').bxSlider({
+                slideSelector : $('.textSliderHolder .slide'),
+                pager : true,
+                controls : false,
+                auto : false,
+                touchEnabled: false,
+                minSlides: 1,
+                maxSlides: 2,
+                moveSlides: 1,
+                slideWidth: 570,
+                shrinkItems: true,
+                slideMargin : 30,
+                infiniteLoop : true
+            });
+
+            $('.textSliderHolder .btn-next').click(function() {
+                carouselGallerySlider.goToNextSlide();
+
+                return false;
+            });
+
+            $('.textSliderHolder .btn-prev').click(function() {
+                carouselGallerySlider.goToPrevSlide();
+
+                return false;
+            });
+
         }
     }
 }
