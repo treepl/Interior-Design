@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon/icomoon.eot?2y05vi");
@@ -17,6 +18,15 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+
+.icon-envelope:before {
+  content: "\e90d"; }
+
+.icon-phone:before {
+  content: "\e90e"; }
+
+.icon-map-marker:before {
+  content: "\e90f"; }
 
 .icon-chevron-double-right:before {
   content: "\e90b"; }
@@ -4465,7 +4475,7 @@ input[type="button"].btn-block {
   padding: 0.75rem 1rem;
   margin-bottom: 1rem;
   list-style: none;
-  background-color: #eeeeee;
+  background-color: transparent;
   border-radius: 0.25rem; }
 
 .breadcrumb-item + .breadcrumb-item {
@@ -4473,8 +4483,8 @@ input[type="button"].btn-block {
   .breadcrumb-item + .breadcrumb-item::before {
     display: inline-block;
     padding-right: 0.5rem;
-    color: #757575;
-    content: "/"; }
+    color: inherit;
+    content: ""; }
 
 .breadcrumb-item + .breadcrumb-item:hover::before {
   text-decoration: underline; }
@@ -4483,7 +4493,7 @@ input[type="button"].btn-block {
   text-decoration: none; }
 
 .breadcrumb-item.active {
-  color: #757575; }
+  color: inherit; }
 
 .pagination {
   display: -ms-flexbox;
@@ -11638,6 +11648,10 @@ img {
   .custom-carousel .btn-next {
     right: 10px; }
 
+.breadcrumb-item + .breadcrumb-item:before {
+  font-family: "icomoon";
+  font-size: 0.625rem; }
+
 .dropdown-menu {
   background-color: transparent; }
   @media (min-width: 992px) {
@@ -11670,6 +11684,9 @@ html {
   overflow: hidden;
   -ms-flex: 1;
       flex: 1; }
+
+.container {
+  position: relative; }
 
 .section {
   position: relative;
@@ -11769,6 +11786,22 @@ html {
   .portfolio-list a {
     text-decoration: none; }
 
+.banner {
+  position: relative;
+  background-size: cover;
+  background-position: 50% 50%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center; }
+  .banner:after {
+    content: "";
+    display: block;
+    width: 0;
+    min-height: 500px; }
+
 .bg-block {
   background: #eeeeee; }
 
@@ -11802,6 +11835,81 @@ html {
     .social-networks i:before {
       text-indent: 0;
       display: block; }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  opacity: 0.5;
+  z-index: 0; }
+
+[id="footer"] {
+  padding: 40px 0; }
+  [id="footer"] .logotype {
+    padding-bottom: 0.875rem; }
+  [id="footer"] .social-networks {
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    text-align: center;
+    margin: 0 -10px; }
+    [id="footer"] .social-networks li {
+      padding: 0 10px 10px; }
+  [id="footer"] .box {
+    margin-bottom: 20px; }
+  [id="footer"] .more {
+    vertical-align: middle; }
+    [id="footer"] .more .icon {
+      vertical-align: middle; }
+  [id="footer"] h4 {
+    margin-bottom: 1.25rem;
+    font-weight: 400; }
+  @media (min-width: 768px) {
+    [id="footer"] p {
+      margin-bottom: 1.375rem; } }
+  [id="footer"] a {
+    color: inherit; }
+    [id="footer"] a:hover {
+      color: #b37000; }
+
+.add-nav li {
+  border-top: 1px solid #424242;
+  padding: 9px 15px;
+  position: relative; }
+  .add-nav li:before {
+    content: "\e902";
+    font-family: "icomoon";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    font-size: 10px;
+    font-weight: 600; }
+
+.add-nav a {
+  color: inherit;
+  text-decoration: none; }
+
+.service-information {
+  border-top: 1px solid #424242;
+  padding-top: 24px; }
+  @media (min-width: 768px) {
+    .service-information {
+      margin-bottom: 3rem; } }
+  .service-information li {
+    position: relative;
+    padding-left: 27px;
+    margin-bottom: 12px; }
+  .service-information .icon {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    color: #ffa000; }
+  .service-information address {
+    margin: 0; }
 
 .visual {
   text-align: center; }

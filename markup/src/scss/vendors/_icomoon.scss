@@ -25,6 +25,19 @@
     -moz-osx-font-smoothing: grayscale;
   }
   
+  
+
+
+
+  .icon-envelope:before {
+    content: "\e90d";
+  }
+  .icon-phone:before {
+    content: "\e90e";
+  }
+  .icon-map-marker:before {
+    content: "\e90f";
+  }
   .icon-chevron-double-right:before {
     content: "\e90b";
   }
@@ -64,3 +77,4 @@
   .icon-google-plus:before {
     content: "\e907";
   }
+  

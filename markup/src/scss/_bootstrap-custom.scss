@@ -101,7 +101,10 @@ $paragraph-margin-bottom:       0.7rem;
 
 $lead-font-size:                ($font-size-base * 1.2) ;
 
-
+$breadcrumb-divider: quote("\e90b");
+$breadcrumb-bg: transparent;
+$breadcrumb-active-color: inherit;
+$breadcrumb-divider-color: inherit;
 
 // Dropdowns
 //

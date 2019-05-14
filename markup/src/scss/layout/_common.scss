@@ -24,6 +24,10 @@ html{
     flex: 1;
 }
 
+.container{
+    position: relative;
+}
+
 .section {
     position: relative;
     padding: $section-indent/2 0;
@@ -158,6 +162,22 @@ html{
     a {
         text-decoration: none;
     }
+} 
+
+.banner{
+    position: relative;
+    background-size: cover;
+    background-position: 50% 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:after{
+        content:"";
+        display: block;
+        width: 0;
+        min-height: 500px;
+    }
 }
 
 .bg-block {
@@ -207,4 +227,15 @@ html{
 
 
     }
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $black;
+    opacity: 0.5;
+    z-index: 0;
 }

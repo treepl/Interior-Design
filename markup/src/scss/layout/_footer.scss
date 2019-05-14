@@ -1,0 +1,100 @@
+[id="footer"] {
+    padding: 40px 0;
+
+    .logotype {
+        padding-bottom: rem(14);
+    }
+
+
+    .social-networks {
+        justify-content: flex-start;
+        text-align: center;
+        margin: 0 -10px;
+
+        li {
+            padding: 0 10px 10px;
+        }
+    }
+
+    .box {
+        margin-bottom: 20px;
+    }
+
+    .more {
+        vertical-align: middle;
+
+        .icon {
+            vertical-align: middle;
+        }
+    }
+
+    h4 {
+        margin-bottom: rem(20);
+        font-weight: 400;
+    }
+
+    p {
+        @include media-breakpoint-up(md) {
+            margin-bottom: rem(22);
+        }
+    }
+
+    a {
+        color: inherit;
+
+        &:hover {
+            color: $link-hover-color;
+        }
+    }
+}
+
+.add-nav {
+    li {
+        border-top: 1px solid #424242;
+        padding: 9px 15px;
+        position: relative;
+
+        &:before {
+            content: "\e902";
+            font-family: "icomoon";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            font-size: 10px;
+            font-weight: 600;
+        }
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+.service-information {
+    border-top: 1px solid #424242;
+    padding-top: 24px;
+
+    @include media-breakpoint-up(md) {
+        margin-bottom: rem(48);
+    }
+
+    li {
+        position: relative;
+        padding-left: 27px;
+        margin-bottom: 12px;
+    }
+
+    .icon {
+        position: absolute;
+        top: 3px;
+        left: 0;
+
+        color: $primary;
+    }
+
+    address {
+        margin: 0;
+    }
+}
