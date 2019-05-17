@@ -1,12 +1,13 @@
 h1,
 .h1 {
     text-transform: uppercase;
+    margin-bottom: 2.5rem;
 }
 
 h2,
 .h2 {
     text-transform: uppercase;  
-    
+    margin-bottom: 2.5rem;
     // margin-bottom: 0.8rem;
 }
 
@@ -20,23 +21,21 @@ h4,
 
 
 ul:not([class]) {
-    padding-left: 24px;
+    padding: 0;
 
     li {
         list-style-type: none;
         position: relative;
-        padding-left: 24px;
-        margin-bottom: 13px;
+        padding-left: 30px;
+        margin-bottom: 11px;
 
         &:before {
-            @include size(10px);
-            content: '';
-            border: 1px solid $primary;
-            border-radius: 50%;
+            content: "\e910";
             position: absolute;
-            left: 0;
-            top: 7px;
-
+            font-family: "icomoon";
+            color: $primary;
+            left: 9px;
+            top: 0;
 
         }
 

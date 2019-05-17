@@ -19,6 +19,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+.icon-check:before {
+  content: "\e910"; }
+
 .icon-envelope:before {
   content: "\e90d"; }
 
@@ -914,11 +917,11 @@ hr {
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: 2.5rem; }
+  margin-bottom: 1.2rem; }
 
 p {
   margin-top: 0;
-  margin-bottom: 0.7rem; }
+  margin-bottom: 1.2rem; }
 
 abbr[title],
 abbr[data-original-title] {
@@ -1146,7 +1149,7 @@ template {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.2rem;
   font-family: "Muli", BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 600;
   line-height: 1.2; }
@@ -11233,11 +11236,11 @@ hr {
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: 2.5rem; }
+  margin-bottom: 1.2rem; }
 
 p {
   margin-top: 0;
-  margin-bottom: 0.7rem; }
+  margin-bottom: 1.2rem; }
 
 abbr[title],
 abbr[data-original-title] {
@@ -11481,30 +11484,30 @@ template {
   overflow: hidden; }
 
 h1, .h1 {
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin-bottom: 2.5rem; }
 
 h2, .h2 {
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin-bottom: 2.5rem; }
 
 h4, .h4 {
   text-transform: uppercase; }
 
 ul:not([class]) {
-  padding-left: 24px; }
+  padding: 0; }
   ul:not([class]) li {
     list-style-type: none;
     position: relative;
-    padding-left: 24px;
-    margin-bottom: 13px; }
+    padding-left: 30px;
+    margin-bottom: 11px; }
     ul:not([class]) li:before {
-      width: 10px;
-      height: 10px;
-      content: '';
-      border: 1px solid #ffa000;
-      border-radius: 50%;
+      content: "\e910";
       position: absolute;
-      left: 0;
-      top: 7px; }
+      font-family: "icomoon";
+      color: #ffa000;
+      left: 9px;
+      top: 0; }
 
 img {
   max-width: 100%;
@@ -11516,30 +11519,30 @@ img {
     font-style: normal; }
 
 h1, .h1 {
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin-bottom: 2.5rem; }
 
 h2, .h2 {
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  margin-bottom: 2.5rem; }
 
 h4, .h4 {
   text-transform: uppercase; }
 
 ul:not([class]) {
-  padding-left: 24px; }
+  padding: 0; }
   ul:not([class]) li {
     list-style-type: none;
     position: relative;
-    padding-left: 24px;
-    margin-bottom: 13px; }
+    padding-left: 30px;
+    margin-bottom: 11px; }
     ul:not([class]) li:before {
-      width: 10px;
-      height: 10px;
-      content: '';
-      border: 1px solid #ffa000;
-      border-radius: 50%;
+      content: "\e910";
       position: absolute;
-      left: 0;
-      top: 7px; }
+      font-family: "icomoon";
+      color: #ffa000;
+      left: 9px;
+      top: 0; }
 
 img {
   max-width: 100%;
@@ -11747,9 +11750,9 @@ html {
     transition: opacity 0.3s ease-in-out; }
     @media (min-width: 992px) {
       .portfolio-list .link {
-        width: 60px;
-        height: 60px;
-        font-size: 35px;
+        width: 40px;
+        height: 40px;
+        font-size: 30px;
         padding-bottom: 5px; } }
     .portfolio-list .link:before {
       content: "+"; }
@@ -11795,12 +11798,20 @@ html {
   -ms-flex-align: center;
       align-items: center;
   -ms-flex-pack: center;
-      justify-content: center; }
+      justify-content: center;
+  padding: 40px 0; }
+  .banner h1 {
+    margin-bottom: 0; }
+    @media (min-width: 992px) {
+      .banner h1 {
+        margin-bottom: 0.5625rem; } }
   .banner:after {
     content: "";
     display: block;
-    width: 0;
-    min-height: 500px; }
+    width: 0; }
+    @media (min-width: 992px) {
+      .banner:after {
+        min-height: 418px; } }
 
 .bg-block {
   background: #eeeeee; }
@@ -12016,17 +12027,17 @@ html {
 .team-slider a {
   color: inherit; }
 
-.banner {
+.visual-banner {
   background-size: cover;
   padding: 46px 0; }
-  .banner .value {
+  .visual-banner .value {
     display: block;
     margin-bottom: 0; }
     @media (min-width: 992px) {
-      .banner .value {
+      .visual-banner .value {
         margin-bottom: 10px; } }
   @media (min-width: 992px) {
-    .banner p {
+    .visual-banner p {
       margin: 0; } }
 
 .testimonials-slider .card {

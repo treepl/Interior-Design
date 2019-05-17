@@ -1,9 +1,9 @@
-html{
-   font-size: 15px;
+html {
+    font-size: 15px;
 
-   @include media-breakpoint-up(lg) {
-       font-size: 16px;
-   }
+    @include media-breakpoint-up(lg) {
+        font-size: 16px;
+    }
 }
 
 #wrapper {
@@ -24,7 +24,7 @@ html{
     flex: 1;
 }
 
-.container{
+.container {
     position: relative;
 }
 
@@ -102,9 +102,9 @@ html{
         transition: opacity $animation-speed ease-in-out;
 
         @include media-breakpoint-up(lg) {
-            width: 60px;
-            height: 60px;
-            font-size: 35px;
+            width: 40px;
+            height: 40px;
+            font-size: 30px;
             padding-bottom: 5px;
 
         }
@@ -162,21 +162,34 @@ html{
     a {
         text-decoration: none;
     }
-} 
+}
 
-.banner{
+.banner {
     position: relative;
     background-size: cover;
     background-position: 50% 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 40px 0;
+    // margin-bottom: 50px; 
 
-    &:after{
-        content:"";
+    h1 {
+        margin-bottom: 0;
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: rem(9);
+        }
+    }
+
+    &:after {
+        content: "";
         display: block;
         width: 0;
-        min-height: 500px;
+
+        @include media-breakpoint-up(lg) {
+            min-height: 418px;
+        }
     }
 }
 
@@ -203,7 +216,7 @@ html{
         &:hover {
             color: $primary;
 
-            i{
+            i {
                 border-color: $primary;
             }
         }
@@ -229,7 +242,7 @@ html{
     }
 }
 
-.overlay{
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
