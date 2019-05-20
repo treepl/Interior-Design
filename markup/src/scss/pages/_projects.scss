@@ -1,0 +1,79 @@
+.projects-gallery {
+
+
+    .mask {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .thumbnail-wrap{
+        padding: 0 40px;
+        position: relative;
+
+      li{
+        >a{
+            display: block;
+            border: 2px solid transparent;
+        }
+
+        &.active a,
+        a:hover{
+            border-color: $primary;
+        }
+
+      }
+
+    }
+
+    .btn-prev,
+    .btn-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: $black;
+        text-decoration: none;
+
+        &:before {
+            font-family: "icomoon";
+            font-size: 30px;
+            line-height: 1;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 30px;
+            }
+        }
+    }
+
+    .btn-prev{
+        left: 0;
+        &:before{
+            content: "\e909";
+        }
+    }
+
+    .btn-next{
+        right: 0;
+        &:before{
+            content: "\e902";
+        }
+    }
+ 
+
+    img {
+        margin: 0;
+    }
+
+    ul {
+        @extend %listreset;
+
+        li {
+            padding: 0;
+
+            &:before {
+                display: none;
+            }
+        }
+    }
+
+
+}

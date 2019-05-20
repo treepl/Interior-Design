@@ -11466,7 +11466,7 @@ template {
 [hidden] {
   display: none !important; }
 
-.portfolio-nav, .social-networks, .team-slider .info {
+.portfolio-nav, .social-networks, .team-slider .info, .projects-gallery ul {
   margin: 0;
   padding: 0;
   list-style: none; }
@@ -12061,3 +12061,53 @@ html {
   display: inline-block;
   vertical-align: top;
   margin-bottom: 0.75rem; }
+
+.projects-gallery .mask {
+  text-align: center;
+  margin-bottom: 30px; }
+
+.projects-gallery .thumbnail-wrap {
+  padding: 0 40px;
+  position: relative; }
+  .projects-gallery .thumbnail-wrap li > a {
+    display: block;
+    border: 2px solid transparent; }
+  .projects-gallery .thumbnail-wrap li.active a,
+  .projects-gallery .thumbnail-wrap li a:hover {
+    border-color: #ffa000; }
+
+.projects-gallery .btn-prev,
+.projects-gallery .btn-next {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #000;
+  text-decoration: none; }
+  .projects-gallery .btn-prev:before,
+  .projects-gallery .btn-next:before {
+    font-family: "icomoon";
+    font-size: 30px;
+    line-height: 1; }
+    @media (min-width: 992px) {
+      .projects-gallery .btn-prev:before,
+      .projects-gallery .btn-next:before {
+        font-size: 30px; } }
+
+.projects-gallery .btn-prev {
+  left: 0; }
+  .projects-gallery .btn-prev:before {
+    content: "\e909"; }
+
+.projects-gallery .btn-next {
+  right: 0; }
+  .projects-gallery .btn-next:before {
+    content: "\e902"; }
+
+.projects-gallery img {
+  margin: 0; }
+
+.projects-gallery ul li {
+  padding: 0; }
+  .projects-gallery ul li:before {
+    display: none; }
