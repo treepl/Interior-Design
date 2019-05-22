@@ -1,0 +1,48 @@
+.contact-info{
+    .list-group-item{
+        border-left-width: 0;
+        border-right-width: 0; 
+        padding-left: 0;
+        padding-right: 0;
+        
+        &:last-child{
+            border-bottom: none;
+        }
+        
+        
+    }
+    
+    .holder{
+        position: relative;
+        padding-left: 27px;
+
+        & + .holder{
+            padding-top: 10px;
+        }
+        .icon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            color: $primary;
+        }
+    }
+
+
+    address {
+        margin: 0;
+    }
+
+    .social-networks{
+        justify-content: flex-start;
+        color: $gray-400;
+
+        i{
+            border-color: $gray-400;
+        }
+    }
+
+    a{
+        color: inherit;
+    }
+} 

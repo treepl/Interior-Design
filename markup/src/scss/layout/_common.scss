@@ -22,6 +22,8 @@ html {
 #main {
     overflow: hidden;
     flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
@@ -200,17 +202,18 @@ html {
 .social-networks {
     @extend %listreset;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    margin: 0 -5px;
+    margin: 0 -10px;
+    color: $gray-400;
+    text-align: center;
 
     li {
-        padding: 0 5px 5px;
+        padding: 0 10px 5px;
 
     }
 
     a {
-        color: $white;
+        color: inherit;
         text-decoration: none;
 
         &:hover {
@@ -230,7 +233,7 @@ html {
         display: block;
         text-indent: 9999px;
         overflow: hidden;
-        border: 1px solid $white;
+        border: 1px solid $gray-400;
 
 
         &:before {
@@ -251,4 +254,9 @@ html {
     background: $black;
     opacity: 0.5;
     z-index: 0;
+}
+
+textarea.form-control{
+    height: 140px;
+    min-height: 140px; 
 }

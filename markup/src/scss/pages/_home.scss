@@ -136,6 +136,21 @@
     a {
         color: inherit;
     }
+
+
+    .social-networks{
+        color: $white;
+        justify-content: center;
+        margin: 0 -5px;
+
+        li{
+            padding: 0 5px 5px;
+        }
+
+        i{
+            border-color: $white;
+        }
+    }
 }
 
 .visual-banner{

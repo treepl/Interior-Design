@@ -7,7 +7,7 @@
     }
 
     .thumbnail-wrap{
-        padding: 0 40px;
+        padding: 0 33px;
         position: relative;
 
       li{
@@ -35,7 +35,7 @@
 
         &:before {
             font-family: "icomoon";
-            font-size: 30px;
+            font-size: 32px;
             line-height: 1;
 
             @include media-breakpoint-up(lg) {
@@ -45,14 +45,14 @@
     }
 
     .btn-prev{
-        left: 0;
+        left: -5px;
         &:before{
             content: "\e909";
         }
     }
 
     .btn-next{
-        right: 0;
+        right: -5px;
         &:before{
             content: "\e902";
         }

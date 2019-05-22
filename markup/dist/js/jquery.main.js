@@ -38,7 +38,7 @@ function initProjectsCarousel() {
                 maxSlides : 4,
                 touchEnabled: false,
                 moveSlides : 1,
-                slideWidth : 119
+                slideWidth : 118
             });
 
             $('.carouselGalleryHolder .btn-next').click(function() {
