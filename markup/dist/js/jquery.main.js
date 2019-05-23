@@ -3,6 +3,7 @@ jQuery(function () {
     initCustomInfoCarousel();
     initCustomTextCarousel();
     initProjectsCarousel();
+    initComingSoonCountDown();
 });
 // $('.dropdown-toggle').dropdown();
  
@@ -171,3 +172,23 @@ function initCustomTextCarousel() {
         }
     }
 }
+
+
+/*Coming Soon*/
+function initComingSoonCountDown() {
+    var condition = $('.comingSoonTimerHolder').size()
+        // && false
+    ;init(condition);
+
+    function init(condition) {
+        if(condition || condition == null) {
+            $('.comingSoonTimerHolder').countdowntimer({
+                dateAndTime : "2019/06/06 00:00:00",
+                size : "lg",
+                regexpMatchFormat : "([0-9]{1,3}):([0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2})",
+                regexpReplaceWith : '<div class="column"> <div class="holder"> <span>$1</span> <p>days</p></div></div><div class="column"> <div class="holder"> <span>$2</span> <p>hours</p></div></div><div class="column"> <div class="holder"> <span>$3</span> <p>minutes</p></div></div><div class="column"> <div class="holder"> <span>$4</span> <p>seconds</p></div></div>'
+            });
+        }
+    }
+}
+/*End Coming Soon*/

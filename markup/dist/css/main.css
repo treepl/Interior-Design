@@ -12184,6 +12184,16 @@ textarea.form-control {
         align-items: center;
     -ms-flex-pack: center;
         justify-content: center; }
+  @media (min-width: 992px) {
+    .system-section.thankyou .jumbotron {
+      padding: 4.1875rem 2.8125rem; } }
+  .system-section.comming .jumbotron {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0; }
+    @media (min-width: 992px) {
+      .system-section.comming .jumbotron {
+        padding: 4.1875rem 2.8125rem; } }
   .system-section .jumbotron {
     background: rgba(255, 255, 255, 0.8);
     max-width: 570px;
@@ -12191,7 +12201,8 @@ textarea.form-control {
     margin: 1.875rem 0.9375rem; }
     @media (min-width: 992px) {
       .system-section .jumbotron {
-        padding: 1.9375rem 2.8125rem; } }
+        padding: 1.9375rem 2.8125rem;
+        width: 570px; } }
     .system-section .jumbotron h2 {
       margin-bottom: 0.625rem; }
       @media (min-width: 992px) {
@@ -12215,3 +12226,48 @@ textarea.form-control {
     @media (min-width: 992px) {
       .system-section .large-text {
         font-size: 120px; } }
+
+.timer {
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto 20px;
+  max-width: 280px; }
+  @media (min-width: 768px) {
+    .timer {
+      max-width: 480px;
+      margin-bottom: 30px; } }
+  @media (min-width: 992px) {
+    .timer {
+      margin-bottom: 60px; } }
+  .timer .column {
+    text-align: center;
+    width: 25%;
+    text-align: center;
+    padding: 0 5px; }
+    @media (min-width: 768px) {
+      .timer .column {
+        padding: 0 15px; } }
+  .timer .holder {
+    font-size: 25px;
+    display: block;
+    padding: 17px 10px;
+    width: 100%;
+    background: #222;
+    display: inline-block;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 10px; }
+    @media (min-width: 768px) {
+      .timer .holder {
+        font-size: 35px; } }
+    .timer .holder span {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600; }
+  .timer p {
+    font-size: 11px;
+    margin-bottom: 0;
+    text-transform: capitalize; }
+    @media (min-width: 768px) {
+      .timer p {
+        font-size: 14px; } }
