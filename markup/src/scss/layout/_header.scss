@@ -1,19 +1,19 @@
-.dropdown-menu{
+.dropdown-menu {
     background-color: transparent;
-    
+
     @include media-breakpoint-up(lg) {
         background-color: $dropdown-bg;
     }
 
-    .dropdown-item{
+    .dropdown-item {
 
-        .navbar-dark &{
-            color:  $navbar-dark-color;
+        .navbar-dark & {
+            color: $navbar-dark-color;
 
             @include media-breakpoint-up(lg) {
                 color: $dropdown-link-color;
             }
         }
-        
+
     }
 }

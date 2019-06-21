@@ -1,24 +1,23 @@
-.contact-info{
-    .list-group-item{
+.contact-info {
+    .list-group-item {
         border-left-width: 0;
-        border-right-width: 0; 
+        border-right-width: 0;
         padding-left: 0;
         padding-right: 0;
-        
-        &:last-child{
+
+        &:last-child {
             border-bottom: none;
         }
-        
-        
     }
-    
-    .holder{
+
+    .holder {
         position: relative;
         padding-left: 27px;
 
-        & + .holder{
+        &+.holder {
             padding-top: 10px;
         }
+
         .icon {
             position: absolute;
             top: 50%;
@@ -33,16 +32,16 @@
         margin: 0;
     }
 
-    .social-networks{
+    .social-networks {
         justify-content: flex-start;
         color: $gray-400;
 
-        i{
+        i {
             border-color: $gray-400;
         }
     }
 
-    a{
+    a {
         color: inherit;
     }
-} 
+}

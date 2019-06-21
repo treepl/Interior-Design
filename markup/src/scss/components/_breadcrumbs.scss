@@ -1,12 +1,12 @@
-.breadcrumb-item{
-    + .breadcrumb-item{
-        &:before{
-           font-family: "icomoon";
-           font-size: rem(10);
-        //    color: inherit;
+.breadcrumb-item {
+    +.breadcrumb-item {
+        &:before {
+            font-family: "icomoon";
+            font-size: rem(10);
         }
     }
-    a{
+
+    a {
         color: inherit;
     }
 }

@@ -138,46 +138,46 @@
     }
 
 
-    .social-networks{
+    .social-networks {
         color: $white;
         justify-content: center;
         margin: 0 -5px;
 
-        li{
+        li {
             padding: 0 5px 5px;
         }
 
-        i{
+        i {
             border-color: $white;
         }
     }
 }
 
-.visual-banner{
+.visual-banner {
     background-size: cover;
     padding: 46px 0;
 
-    .value{
+    .value {
         display: block;
         margin-bottom: 0;
-        
+
         @include media-breakpoint-up(lg) {
             margin-bottom: 10px;
         }
     }
 
-    p{
-        
+    p {
+
         @include media-breakpoint-up(lg) {
             margin: 0;
         }
     }
 }
 
-.testimonials-slider{
-    
+.testimonials-slider {
 
-    .card{
+
+    .card {
         padding: rem(25) rem(15);
 
         @include media-breakpoint-up(lg) {
@@ -185,27 +185,26 @@
         }
     }
 
-    .card-body{
+    .card-body {
         padding: rem(16) 0;
 
-        
+
     }
 
     .name,
-    .position{
+    .position {
         display: block;
     }
 
-    .name{
+    .name {
         font-size: rem(18);
         margin-bottom: rem(13);
     }
-    
-    img{
-        display:inline-block;
-        vertical-align:top;
+
+    img {
+        display: inline-block;
+        vertical-align: top;
         margin-bottom: rem(12);
-        
+
     }
 }
-

@@ -37,11 +37,11 @@
 }
 
 .carousel-indicators li {
-    border-radius: 50%; 
+    border-radius: 50%;
 }
 
 
-.custom-carousel{
+.custom-carousel {
     position: relative;
     margin-bottom: 41px;
     padding: 0 30px 1px;
@@ -55,7 +55,7 @@
     }
 
     .slideset,
-    .slide{
+    .slide {
         display: flex;
     }
 
@@ -92,6 +92,7 @@
             }
         }
     }
+
     .controls {
         position: absolute;
         top: 50%;

@@ -6,22 +6,22 @@
         margin-bottom: 30px;
     }
 
-    .thumbnail-wrap{
+    .thumbnail-wrap {
         padding: 0 33px;
         position: relative;
 
-      li{
-        >a{
-            display: block;
-            border: 2px solid transparent;
-        }
+        li {
+            >a {
+                display: block;
+                border: 2px solid transparent;
+            }
 
-        &.active a,
-        a:hover{
-            border-color: $primary;
-        }
+            &.active a,
+            a:hover {
+                border-color: $primary;
+            }
 
-      }
+        }
 
     }
 
@@ -44,20 +44,22 @@
         }
     }
 
-    .btn-prev{
+    .btn-prev {
         left: -5px;
-        &:before{
+
+        &:before {
             content: "\e909";
         }
     }
 
-    .btn-next{
+    .btn-next {
         right: -5px;
-        &:before{
+
+        &:before {
             content: "\e902";
         }
     }
- 
+
 
     img {
         margin: 0;
