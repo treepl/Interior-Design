@@ -21,16 +21,16 @@ $media-expressions: (
 
 
 // Icon fonts
-// @import 'vendors/fontawesome_free/fontawesome';
-// @import 'vendors/fontawesome_pro/fontawesome';
-@import 'vendors/icomoon';
-@import 'vendors/fancybox';
+@import 'vendors/fontawesome_free/fontawesome';  
+// @import 'vendors/fontawesome_pro/fontawesome';    
+@import 'vendors/icomoon';  
+@import 'vendors/fancybox';  
+ 
 
-
-@import "variables";
+// @import "variables";
  
 @import "bootstrap";
-@import 'base/mixins'; 
+@import 'base/mixins';  
 @import 'base/helpers';
 @import 'base/typography'; 
 @import 'base/typography'; 
@@ -40,7 +40,7 @@ $media-expressions: (
 @import 'components/buttons';  
 @import 'components/carousel';  
 @import 'components/breadcrumbs';  
-
+ 
 
 
 @import 'layout/header';
@@ -51,6 +51,8 @@ $media-expressions: (
 @import 'pages/projects';
 @import 'pages/contact'; 
 @import 'pages/system-pages';
+
+
  
 
 
