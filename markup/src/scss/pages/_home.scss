@@ -112,6 +112,7 @@
 
     .card-title {
         margin-bottom: 0;
+        text-transform: none;
         text-align: center;
 
     }
@@ -191,6 +192,9 @@
 
     }
 
+    .card-title{
+        text-transform: none;
+    }
     .name,
     .position {
         display: block;

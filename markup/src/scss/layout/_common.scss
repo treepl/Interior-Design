@@ -141,6 +141,7 @@ html {
 
     .card-title {
         margin-bottom: 13px;
+        text-transform: none;
         font-weight: 400;
 
         a {
@@ -259,4 +260,18 @@ html {
 textarea.form-control {
     height: 140px;
     min-height: 140px;
+}
+
+.accessibility{
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+.accessibility:focus{
+    position:static;
+    width:auto;
+    height:auto;
 }
