@@ -18241,6 +18241,9 @@ img {
 .breadcrumb-item a {
   color: inherit; }
 
+[id="header"] {
+  min-height: var(--header-min-height); }
+
 .dropdown-menu {
   background-color: transparent; }
   @media (min-width: 992px) {
@@ -18549,7 +18552,7 @@ textarea.form-control {
       opacity: 0.6; }
     .visual .carousel-item:after {
       content: "";
-      min-height: calc(100vh - 140px);
+      min-height: calc(100vh - 58px);
       display: inline-block;
       vertical-align: middle;
       width: 0; }

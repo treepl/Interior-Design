@@ -4,8 +4,17 @@ jQuery(function () {
     initCustomTextCarousel();
     initProjectsCarousel();
     initComingSoonCountDown();
+    initHeaderHeight();
 });
 // $('.dropdown-toggle').dropdown();
+
+// TODO
+
+function initHeaderHeight(){
+
+    var header = document.querySelector('header');
+    header.style.setProperty('--header-min-height', $('#header').outerHeight() + 'px'); 
+}
  
 
 function initProjectsCarousel() {

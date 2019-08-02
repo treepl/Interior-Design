@@ -6,11 +6,13 @@
 </head>
 
 <body>
-      <a class="accessibility" href="#main">Skip to Content</a>
-
+   <noscript>
+      <div>Javascript must be enabled for the correct page display</div>
+   </noscript>
+   <a class="sr-only sr-only-focusable" href="#main">Skip to main content</a>
    <section id="wrapper">
       //= template/header.html
-      <main  id="main"> 
+      <main id="main">
          <section id="carouselExampleFade" class="carousel slide carousel-fade visual" data-ride="carousel">
             <ol class="carousel-indicators">
                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -57,7 +59,7 @@
          </section>
          <section class="section">
             <div class="container">
-                  //= template/snippets/cards-list.html
+               //= template/snippets/cards-list.html
                <div class="text-center">
                   <a href="#" class="btn btn-primary">more about us</a>
                </div>
@@ -107,8 +109,8 @@
                      </div>
                   </div>
                   <div class="controls">
-                     <a href="#" class="btn-prev"  aria-label="previous slide"> <i class="icon icon-left-arrow"></i> </a>
-                     <a href="#" class="btn-next"  aria-label="next slide"><i class="icon icon-right-arrow"></i></a>
+                     <a href="#" class="btn-prev" aria-label="previous slide"> <i class="icon icon-left-arrow"></i> </a>
+                     <a href="#" class="btn-next" aria-label="next slide"><i class="icon icon-right-arrow"></i></a>
                   </div>
                </div>
             </div>
@@ -117,7 +119,7 @@
    </section>
 
    //= template/footer.html
- 
+
 </body>
 
 </html>
