@@ -1,0 +1,17 @@
+{% component source: "Main Banner", layout: "List", filterBy: "name", filterValue: "Project", limit: "1", type: "module" %}
+<section class="section bg-block">
+    <div class="container">
+       <nav>
+          <ul class="portfolio-nav cardsFilterBTNHolder">
+             <li class="active"><a href="#" class="btn btn-secondary" data-filter="*">All projects</a></li>
+             <li><a href="#" class="btn btn-secondary" data-filter=".office">Office</a></li>
+             <li><a href="#" class="btn btn-secondary" data-filter=".apartment">Apartment</a></li>
+             <li><a href="#" class="btn btn-secondary" data-filter=".commercial">Commercial</a></li>
+          </ul>
+       </nav>
+       
+    </div>
+    <div class="row portfolio-list cardsFilterGridHolder">
+        {% component source: "Project Items", layout: "List", limit: "6", type: "module" %}
+    </div>
+</section>

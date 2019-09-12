@@ -1,0 +1,14 @@
+{% assign isSelected = "" %}
+{% if request.request_url.path == item.itemUrl %}
+    {% assign isSelected = "active" %}
+{% endif -%}
+{% if item.items != null %}
+<li{% if item.itemId != null %} id="{{item.itemId}}" {% endif -%} class="{% if item.itemClass != null or isSelected != null %}{{item.itemClass}} {{isSelected}}{% endif -%} nav-item dropdown" {% if item.itemCustomAttribute != null %} {{item.itemCustomAttribute}}{% endif -%}>
+	<a href="{{item.itemUrl}}" class="nav-link  dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" {% if item.itemTargetFrame != null %}target="{{item.itemTargetFrame}}"{% endif -%} {% if item.itemTitle != "" %} title="{{item.itemTitle}}" {% endif -%}>{{item.itemName}}</a>
+    {% include "/Content/MenuLayouts/{{this.alias}}/{{this.layoutGroup}}/sub_items.layout" %}
+</li>
+{% else %}
+<li{% if item.itemId != null %} id="{{item.itemId}}" {% endif -%} class="{% if item.itemClass != null or isSelected != null %}{{item.itemClass}} {{isSelected}}{% endif -%} nav-item" {% if item.itemCustomAttribute != null %} {{item.itemCustomAttribute}}{% endif -%}>
+	<a href="{{item.itemUrl}}" class="nav-link" {% if item.itemTargetFrame != null %}target="{{item.itemTargetFrame}}"{% endif -%} {% if item.itemTitle != "" %} title="{{item.itemTitle}}" {% endif -%}>{{item.itemName}}</a>
+</li>
+{% endif%}

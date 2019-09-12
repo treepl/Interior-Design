@@ -1,0 +1,11 @@
+{% assign categoriesList = this['ItemCategories'] %}
+<div class="col col-md-3 {% for item in categoriesList %}{{item | downcase | replace: ' ', ''}} {% endfor %}">
+  <div class="card ">
+     <img src="{{this['Image']}}" lass="card-img-top" alt="{{this.name}}">
+     <a class="link masonryGalleryLightbox" href="{{this['Image']}}" data-fancybox="images{{this['parentId']}}"></a>
+     <div class="card-body">
+        <h5 class="card-title"><a href="{{this['Url']}}">{{this['Name']}}<i class="icon icon-long-arrow-right"></i></a></h5>
+        <p class="card-text">{% for item in categoriesList %}{{item | downcase | replace: ' ', ''}} {% endfor %}</p>
+     </div>
+  </div>
+</div>

@@ -23,19 +23,19 @@
         margin: 0;
 
         @include media-breakpoint-up(lg) {
-            padding: rem(67) rem(45);
+            padding: rem(67) rem(30);
         }
     }
 
     .jumbotron {
         background: rgba($white, 0.8);
-        max-width: 570px;
+        max-width: 740px;
         padding: rem(20);
         margin: rem(30) rem(15);
 
         @include media-breakpoint-up(lg) {
             padding: rem(31) rem(45);
-            width: 570px;
+            width: 740px;
         }
 
         h2 {
@@ -44,15 +44,13 @@
             @include media-breakpoint-up(lg) {
                 margin-bottom: rem(22);
             }
-
-
         }
 
         .lead {
             line-height: 1.7;
 
             @include media-breakpoint-up(lg) {
-                margin-bottom: rem(43px);
+                margin-bottom: rem(43);
             }
         }
     }
@@ -71,6 +69,23 @@
 
         @include media-breakpoint-up(lg) {
             font-size: 120px;
+        }
+    }
+}
+
+.comming {
+    h1 {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.thankyou {
+    .jumbotron {
+        max-width: 580px;
+
+        @include media-breakpoint-up(lg) {
+
+            width: 580px;
         }
     }
 }

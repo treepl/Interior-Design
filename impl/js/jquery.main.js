@@ -4,8 +4,17 @@ jQuery(function () {
     initCustomTextCarousel();
     initProjectsCarousel();
     initComingSoonCountDown();
+    initHeaderHeight();
 });
 // $('.dropdown-toggle').dropdown();
+
+// TODO
+
+function initHeaderHeight(){
+
+    var header = document.querySelector('header');
+    header.style.setProperty('--header-min-height', $('#header').outerHeight() + 'px'); 
+}
  
 
 function initProjectsCarousel() {
@@ -111,7 +120,7 @@ function initCustomInfoCarousel() {
                 touchEnabled: false,
                 minSlides: 1,
                 maxSlides: 4,
-                moveSlides: 1,
+                moveSlides: 3,
                 slideWidth: 270,
                 shrinkItems: true,
                 slideMargin : 30,
@@ -183,7 +192,7 @@ function initComingSoonCountDown() {
     function init(condition) {
         if(condition || condition == null) {
             $('.comingSoonTimerHolder').countdowntimer({
-                dateAndTime : "2019/06/06 00:00:00",
+                dateAndTime : "2019/11/11 00:00:00",
                 size : "lg",
                 regexpMatchFormat : "([0-9]{1,3}):([0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2})",
                 regexpReplaceWith : '<div class="column"> <div class="holder"> <span>$1</span> <p>days</p></div></div><div class="column"> <div class="holder"> <span>$2</span> <p>hours</p></div></div><div class="column"> <div class="holder"> <span>$3</span> <p>minutes</p></div></div><div class="column"> <div class="holder"> <span>$4</span> <p>seconds</p></div></div>'

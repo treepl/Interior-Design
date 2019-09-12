@@ -1,0 +1,10 @@
+{% if item.items != null %}
+    {% assign currentItem = item -%}
+    <div class="dropdown-menu" >
+
+        {% for item in currentItem.items -%}
+            {% include "/Content/MenuLayouts/{{this.alias}}/{{this.layoutGroup}}/dropdown_item.layout" %}
+        {% endfor -%}
+
+    </div>
+{% endif -%}

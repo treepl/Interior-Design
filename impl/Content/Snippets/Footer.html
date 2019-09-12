@@ -1,0 +1,36 @@
+<footer id="footer" class="bg-dark text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-lg-4 order-md-2  order-lg-1 box">
+                    <div class="logotype">
+                        <a href="/">
+                            <img src="{{siteinformation.company_information.logo}}" alt="{{this.name}}">
+                        </a>
+                    </div>
+                    <p>{{siteinformation.company_information.footer_info_text}}</p>
+                    <a href="#" class="more">Read more <i class="icon icon-long-arrow-right"></i> </a>
+                </div>
+                <div class="col-sm-6 col-lg-4  order-md-1">
+                    <h4>Main Links</h4>
+                    {% component type: "menu", alias: "footer_menu", layoutGroup: "Default" %}
+                </div>
+                <div class="col-sm-6 col-lg-4  order-md-1">   
+                    <h4>GET IN TOUCH</h4>
+                    <ul class="service-information list-unstyled">
+                        <li> <i class="icon icon-map-marker"></i> <address>{{siteinformation.company_information.address}}</address> </li>
+                        <li> <i class="icon icon-phone"></i> <a href="tel:{{siteinformation.company_information.phone}}">{{siteinformation.company_information.phone}}</a> </li>
+                        <li> <i class="icon icon-envelope"></i> <a href="mailto:{{siteinformation.company_information.email}}">{{siteinformation.company_information.email}}</a> </li>
+                    </ul>
+                    <ul class="social-networks list-unstyled">
+                       <li><a href="{{si.sn.fl}}"><i class="icon icon-facebook"></i></a></li>
+                       <li><a href="{{si.sn.tl}}"><i class="icon icon-twitter"></i></a></li>
+                       <li><a href="{{si.sn.il}}"><i class="icon icon-instagram"></i></a></li>
+                       <li><a href="{{si.sn.yl}}"><i class="icon icon-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <a href="#" class="back-to-top">
+        <i class="icon icon-arrow-up"></i>
+    </a>

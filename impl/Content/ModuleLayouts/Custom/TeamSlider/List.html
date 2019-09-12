@@ -1,0 +1,23 @@
+<div class="slide">
+    <div class="card">
+       <div class="img-block">
+          <img src="{{this['Image']}}" class="card-img-top" alt="Person photo">
+          <div class="hover-block">
+             <ul class="info">
+                <li class="position">{{this['Position']}}</li>
+                {% if this['Phone'].size > 0 -%}
+                  <li>{{this['Phone']}}</li>
+                {% endif -%}
+             </ul>
+             <ul class="social-networks">
+                <li><a href="{{this['FacebookLink']}}"><i class="icon icon-facebook">facebook</i></a></li>
+                <li><a href="{{this['TwitterLink']}}"><i class="icon icon-twitter">twitter</i></a></li>
+                <li><a href="{{this['InstagramLink']}}"><i class="icon icon-instagram">instagram</i></a></li>
+             </ul>
+          </div>
+       </div>
+       <div class="card-body">
+          <h2 class="card-title h5">{{this['Name']}}</h2>
+       </div>
+    </div>
+</div>

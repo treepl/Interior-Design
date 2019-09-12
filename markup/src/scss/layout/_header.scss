@@ -1,13 +1,14 @@
-
-
-[id="header"]{
-    min-height: var(--header-min-height); 
+[id="header"] {
+    min-height: var(--header-min-height);
+    background-color: $gray-800;
 }
+
 .dropdown-menu {
     background-color: transparent;
 
     @include media-breakpoint-up(lg) {
         background-color: $dropdown-bg;
+        border-top: 4px solid orange;
     }
 
     .dropdown-item {
@@ -20,12 +21,29 @@
             }
         }
 
+        &:hover {
+
+            background-color: inherit;
+            color: $navbar-dark-hover-color;
+
+
+        }
+
     }
 }
 
-.navbar-brand{
-    img{
-        display:inline-block;
-        vertical-align:top;
+.navbar-brand {
+    img {
+        display: inline-block;
+        vertical-align: top;
     }
+}
+
+.navbar-toggler {
+    margin: 5px 0;
+}
+
+.navbar-toggler-icon {
+    width: 1em;
+    height: 1em;
 }

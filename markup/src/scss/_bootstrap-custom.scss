@@ -118,9 +118,10 @@ $dropdown-item-padding-x: 1.2rem;
 
 $dropdown-border-width: 0;
 $dropdown-bg: $white;
-$dropdown-link-color: $black;
+$dropdown-link-color: $white;
 
- 
+$navbar-toggler-padding-y: .25rem;
+$navbar-toggler-padding-x: .35rem;
 
 
 // Navs 
@@ -138,11 +139,12 @@ $navbar-dark-color: $white;
 $navbar-dark-active-color: $primary;
 $navbar-brand-font-size: 15px;
 
-$navbar-padding-y: 0.25rem;
+$navbar-padding-y: 0.5rem;
 $navbar-padding-x: 1rem;
 
 $navbar-brand-padding-y: 0;
 
+$dropdown-bg: $gray-800;
 
 
 // Carousel
