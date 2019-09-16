@@ -18536,7 +18536,7 @@ textarea.form-control {
     margin-bottom: 12px; }
   .service-information .icon {
     position: absolute;
-    top: 3px;
+    top: 6px;
     left: 0;
     color: #ffa000; }
   .service-information address {
@@ -18742,7 +18742,8 @@ textarea.form-control {
   margin: 0; }
 
 .projects-gallery ul li {
-  padding: 0; }
+  padding: 0;
+  text-align: center; }
   .projects-gallery ul li:before {
     display: none; }
 
