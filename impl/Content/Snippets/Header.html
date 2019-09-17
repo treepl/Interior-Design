@@ -1,13 +1,15 @@
 <header id="header" class="sticky-top header">
-     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="sr-only sr-only-focusable" href="#content" accesskey="s">Skip to main content</a> 
+    <a href="#" data-toggle="modal" data-target="#access" accesskey="0" aria-controls="access" aria-haspopup="true" tabindex="0"></a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-           <a class="navbar-brand" href="/"><img src="images/logo.png" alt=""></a>
-           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-           </button>
-           <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-              {% component type: "menu", alias: "main_menu", layoutGroup: "Default" %}
-           </div>
+            <a class="navbar-brand" href="/"><img src="images/logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                {% component type: "menu", alias: "main_menu", layoutGroup: "Default" %}
+            </div>
         </div>
-     </nav>
-  </header>
+    </nav>
+</header>

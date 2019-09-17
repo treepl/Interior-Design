@@ -1,6 +1,6 @@
 {% assign categoriesList = this['ItemCategories'] %}
-<div class="col col-md-3 {% for item in categoriesList %}{{item | downcase | replace: ' ', ''}} {% endfor %}">
-  <div class="card ">
+<div class="col col-md-3 load-item {% for item in categoriesList %}{{item | downcase | replace: ' ', ''}} {% endfor %}">
+  <div class="card">
      <img src="{{this['Image']}}" lass="card-img-top" alt="{{this.name}}">
      <a class="link masonryGalleryLightbox" href="{{this['Image']}}" data-fancybox="images{{this['parentId']}}"></a>
      <div class="card-body">

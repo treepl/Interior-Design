@@ -1,81 +1,257 @@
-            <section class="banner text-white text-center" style="background-image:url({{this['VisualImage']}}) ">
-                <span class="overlay"></span>
-                <div class="container">
-                    <h1>{{this['Name']}}</h1>
-                    <nav aria-label="breadcrumb ">
-                        <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item " aria-current="page">Home</li>
-                            <li class="breadcrumb-item "><a href="#">Projects</a></li>
-                            <li class="breadcrumb-item active">Apartment Project</li>
-                        </ol>
-                    </nav>
-                </div>
-            </section>
-            <section class="section">
-                <div class="container">
-                    <h1 class="h2 text-center">About the Project</h1>
-                    <div class="row">
-                        <div class="col-md-6">
-                           {{this['Description']}}
-                            <h4>Main information</h4>
-                            <dl class="row">
-                                <dt class="col-sm-4">Date:</dt>
-                                <dd class="col-sm-8">{{this['Date'] | date: "%B %Y" }}</dd>
-                                <dt class="col-sm-4">Location:</dt>
-                                <dd class="col-sm-8">{{this['Location']}}</dd>
-                                <dt class="col-sm-4">Value:</dt>
-                                <dd class="col-sm-8">${{this['Value']}}</dd>
-                                <dt class="col-sm-4">Total Square:</dt>
-                                <dd class="col-sm-8">{{this['TotalSquare']}}</dd>
-                            </dl>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="projects-gallery carouselGalleryHolder">
-                                <div class="mask">
-                                    <div class="slideset imageHolder">
-                                        <div class="slide">
-                                            <img src="images/projects/project-01-full.jpg" alt="">
-                                        </div>
-                                        <div class="slide">
-                                            <img src="images/projects/project-02-full.jpg" alt="">
-                                        </div>
-                                        <div class="slide">
-                                            <img src="images/projects/project-01.jpg" alt="">
-                                        </div>
-                                        <div class="slide">
-                                            <img src="images/projects/project-04-full.jpg" alt="">
-                                        </div>
-                                        <div class="slide">
-                                            <img src="images/projects/project-05-full.jpg" alt="">
-                                        </div>
-                                        <div class="slide">
-                                            <img src="images/projects/project-01-full.jpg" alt="">
-                                        </div>
-                                        <div class="slide">
-                                            <img src="images/projects/project-04-full.jpg" alt="">
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="thumbnail-wrap">
-                                    <div class="thumbnail">
-                                        <ul>
-                                            <li><a href="#" data-slide-index="0"><img src="images/projects/project-01-full.jpg" alt=""></a></li>
-                                            <li><a href="#" data-slide-index="1"><img src="images/projects/project-02-full.jpg" alt=""></a></li>
-                                            <li><a href="#" data-slide-index="2"><img src="images/projects/project-01.jpg" alt=""></a></li>
-                                            <li><a href="#" data-slide-index="3"><img src="images/projects/project-04-full.jpg" alt=""></a></li>
-                                            <li><a href="#" data-slide-index="4"><img src="images/projects/project-05-full.jpg" alt=""></a></li>
-                                            <li><a href="#" data-slide-index="5"><img src="images/projects/project-01-full.jpg" alt=""></a></li>
-                                            <li><a href="#" data-slide-index="6"><img src="images/projects/project-04-full.jpg" alt=""></a></li>
-                                           
-                                        </ul>
-                                        <a href="#" class="btn-prev"></a>
-                                        <a href="#" class="btn-next"></a>
-                                    </div>
-
-                                </div>
+<script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key={{si.ci.ak}}"></script>
+<section class="banner text-white text-center" style="background-image:url({{this['Image']}})">
+<span class="overlay"></span>
+<div class="container">
+   <h1>{{this['Name']}}</h1>
+   <nav aria-label="breadcrumb ">
+      <ol class="breadcrumb justify-content-center">
+         <li class="breadcrumb-item " aria-current="page">Home</li>
+         <li class="breadcrumb-item "><a href="/projects">Projects</a></li>
+         <li class="breadcrumb-item active"><a href="#">{{this['Name']}}</a></li>
+      </ol>
+   </nav>
+</div>
+</section>           
+<section class="section">
+    <div class="container">
+        <h1 class="h2 text-center">About the Project</h1>
+        <div class="row">
+            <div class="col-md-6">
+               {{this['Description']}}
+                <h4>Main information</h4>
+                <dl class="row">
+                    <dt class="col-sm-4">Date:</dt>
+                    <dd class="col-sm-8">{{this['Date'] | date: "%B %Y" }}</dd>
+                    <dt class="col-sm-4">Location:</dt>
+                    <dd class="col-sm-8">{{this['Location']}}</dd>
+                    <dt class="col-sm-4">Value:</dt>
+                    <dd class="col-sm-8">$ {{this['Value']}}</dd>
+                    <dt class="col-sm-4">Total Square:</dt>
+                    <dd class="col-sm-8">{{this['TotalSquare']}} sq. ft.</dd>
+                </dl>
+            </div>
+            <div class="col-md-6">
+                <div class="projects-gallery carouselGalleryHolder">
+                    <div class="mask">
+                        <div class="slideset imageHolder">
+                            <div class="slide">
+                                <img src="{{this['SliderImg01']}}?height=365&mode=crop" alt="design photo">
+                            </div>
+                            <div class="slide">
+                                <img src="{{this['SliderImg02']}}?height=365&mode=crop" alt="design photo">
+                            </div>
+                            <div class="slide">
+                                <img src="{{this['SliderImg03']}}?height=365&mode=crop" alt="design photo">
+                            </div>
+                            <div class="slide">
+                                <img src="{{this['SliderImg04']}}?height=365&mode=crop" alt="design photo">
+                            </div>
+                            <div class="slide">
+                                <img src="{{this['SliderImg05']}}?height=365&mode=crop" alt="design photo">
                             </div>
                         </div>
                     </div>
+                    <div class="thumbnail-wrap">
+                        <div class="thumbnail">
+                            <ul>
+                                <li><a href="#" data-slide-index="0"><img src="{{this['SliderImg01']}}?height=80&mode=crop" alt="design photo"></a></li>
+                                <li><a href="#" data-slide-index="1"><img src="{{this['SliderImg02']}}?height=80&mode=crop" alt="design photo"></a></li>
+                                <li><a href="#" data-slide-index="2"><img src="{{this['SliderImg03']}}?height=80&mode=crop" alt="design photo"></a></li>
+                                <li><a href="#" data-slide-index="3"><img src="{{this['SliderImg04']}}?height=80&mode=crop" alt="design photo"></a></li>
+                                <li><a href="#" data-slide-index="4"><img src="{{this['SliderImg05']}}?height=80&mode=crop" alt="design photo"></a></li>
+                            </ul>
+                            <a href="#" class="btn-prev"></a>
+                            <a href="#" class="btn-next"></a>
+                        </div>
+
+                    </div>
                 </div>
-            </section>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="map-holder" width="1920" height="615">
+    {% component source: "Project Items", layout: "", object: "collection", collectionVariable: "map", type: "module" %}
+   
+    <div class="google-map-holder" id="mapHolder" style=" height:500px;"></div>
+</section>
+<script>
+    $(function(){
+        initGoogleMaps();
+    });
+
+    function initGoogleMaps() {
+        var condition = $('#mapHolder').length
+            // && false
+        ;init(condition);
+
+        function init(condition) {
+            if(condition || condition == null) {
+                var myLatLng = {lat: +'{{map.items[0].LocationLat}}', lng: +'{{map.items[0].LocationLng}}' };
+                var mapOptions = {
+                    zoom: 12,
+                    center: myLatLng,
+                    scrollwheel: false,
+                    styles: 
+                    [
+                            {
+                                "featureType": "administrative",
+                                "elementType": "all",
+                                "stylers": [
+                                    {
+                                        "saturation": "-100"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "administrative.province",
+                                "elementType": "all",
+                                "stylers": [
+                                    {
+                                        "visibility": "off"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "landscape",
+                                "elementType": "all",
+                                "stylers": [
+                                    {
+                                        "saturation": -100
+                                    },
+                                    {
+                                        "lightness": 65
+                                    },
+                                    {
+                                        "visibility": "on"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "poi",
+                                "elementType": "all",
+                                "stylers": [
+                                    {
+                                        "saturation": -100
+                                    },
+                                    {
+                                        "lightness": "50"
+                                    },
+                                    {
+                                        "visibility": "simplified"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "road",
+                                "elementType": "all",
+                                "stylers": [
+                                    {
+                                        "saturation": "-100"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "road.highway",
+                                "elementType": "all",
+                                "stylers": [
+                                    {
+                                        "visibility": "simplified"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "road.arterial",
+                                "elementType": "all",
+                                "stylers": [
+                                    {
+                                        "lightness": "30"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "road.local",
+                                "elementType": "all",
+                                "stylers": [
+                                    {
+                                        "lightness": "40"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "transit",
+                                "elementType": "all",
+                                "stylers": [
+                                    {
+                                        "saturation": -100
+                                    },
+                                    {
+                                        "visibility": "simplified"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "water",
+                                "elementType": "geometry",
+                                "stylers": [
+                                    {
+                                        "hue": "#ffff00"
+                                    },
+                                    {
+                                        "lightness": -25
+                                    },
+                                    {
+                                        "saturation": -97
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "water",
+                                "elementType": "labels",
+                                "stylers": [
+                                    {
+                                        "lightness": -25
+                                    },
+                                    {
+                                        "saturation": -100
+                                    }
+                                ]
+                            }
+                    ]
+                    
+                };
+
+                var mapElement = document.getElementById('mapHolder');
+                var map = new google.maps.Map(mapElement, mapOptions);
+                var _markers = [
+                    {% for item in map.items -%}
+                    {% if forloop.last == true -%}
+                    ['{{map.items[0].Name}}', +'{{map.items[0].LocationLat}}', +'{{map.items[0].LocationLng}}']
+                            {% else -%}
+                        ['{{map.items[0].Name}}', +'{{map.items[0].LocationLat}}', +'{{map.items[0].LocationLng}}'],
+                    {% endif -%}
+                    {% endfor -%}
+                ];
+
+                var latlngbounds = new google.maps.LatLngBounds();
+
+                for (var i = 0; i < _markers.length; i++) {
+                    var _marker = _markers[i];
+                    var myLatLng = new google.maps.LatLng(_marker[1], _marker[2]);
+                    var marker = new google.maps.Marker({
+                        position: {lat: _marker[1], lng: _marker[2]},
+                        map: map,
+                         icon: "{{siteinformation.company_information.map_marker}}",
+                        title: _marker[0]
+                    });
+                    latlngbounds.extend(myLatLng);
+                }
+
+                if(_markers.length > 1) {
+                    map.setCenter( latlngbounds.getCenter(), map.fitBounds(latlngbounds));
+                }
+                
+            }
+        }
+    }
+</script>
