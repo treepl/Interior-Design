@@ -21,11 +21,11 @@
             }
         }
 
-        &:hover {
+        &:hover,
+        &:focus {
 
             background-color: inherit;
             color: $navbar-dark-hover-color;
-
 
         }
 

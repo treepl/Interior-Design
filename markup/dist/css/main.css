@@ -6662,7 +6662,6 @@ body.compensate-for-scrollbar {
   -webkit-backface-visibility: hidden;
   height: 100%;
   left: 0;
-  outline: none;
   position: fixed;
   -webkit-tap-highlight-color: transparent;
   top: 0;
@@ -6758,7 +6757,6 @@ body.compensate-for-scrollbar {
   display: none;
   height: 100%;
   left: 0;
-  outline: none;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   padding: 44px;
@@ -6944,9 +6942,6 @@ body.compensate-for-scrollbar {
 
 .fancybox-button:hover {
   color: #fff; }
-
-.fancybox-button:focus {
-  outline: none; }
 
 .fancybox-button.fancybox-focus {
   outline: 1px dotted; }
@@ -7382,7 +7377,6 @@ body.compensate-for-scrollbar {
   margin: 2px;
   max-height: calc(100% - 8px);
   max-width: calc(50% - 4px);
-  outline: none;
   overflow: hidden;
   padding: 0;
   position: relative;
@@ -18256,7 +18250,7 @@ img {
     @media (min-width: 992px) {
       .navbar-dark .dropdown-menu .dropdown-item {
         color: #fff; } }
-  .dropdown-menu .dropdown-item:hover {
+  .dropdown-menu .dropdown-item:hover, .dropdown-menu .dropdown-item:focus {
     background-color: inherit;
     color: rgba(255, 255, 255, 0.75); }
 
