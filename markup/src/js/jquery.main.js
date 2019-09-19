@@ -129,7 +129,8 @@ function initCustomInfoCarousel() {
                 slideWidth: 270,
                 shrinkItems: true,
                 slideMargin: 30,
-                infiniteLoop: true
+                startSlide: 0,
+                infiniteLoop: false
             });
   
             $('.teamSliderHolder .btn-next').click(function() {

@@ -18297,8 +18297,8 @@ html {
     position: relative;
     margin-bottom: 18px; }
     .portfolio-list .card:hover .link,
-    .portfolio-list .card:hover .card-body, .portfolio-list .card:focus .link,
-    .portfolio-list .card:focus .card-body {
+    .portfolio-list .card:hover .card-body, .portfolio-list .card:focus-within .link,
+    .portfolio-list .card:focus-within .card-body {
       opacity: 1; }
   .portfolio-list .link {
     color: inherit;
@@ -18571,7 +18571,7 @@ textarea.form-control {
 
 .team-slider .card {
   position: relative; }
-  .team-slider .card:hover .hover-block {
+  .team-slider .card:hover .hover-block, .team-slider .card:focus-within .hover-block {
     opacity: 1; }
 
 .team-slider .img-block {

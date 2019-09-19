@@ -86,7 +86,8 @@
     .card {
         position: relative;
 
-        &:hover {
+        &:hover,
+        &:focus-within {
             .hover-block {
                 opacity: 1;
             }
@@ -116,7 +117,6 @@
         @include media-breakpoint-down(md) {
             padding: 10px;
         }
-
     }
 
     .card-title {
