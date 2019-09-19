@@ -43,6 +43,12 @@ html {
     }
 }
 
+.navbar-nav {
+    .nav-item:last-child a{
+        padding-right: 0;
+    }
+}
+
 .portfolio-nav {
     @extend %listreset;
     display: flex;
@@ -137,7 +143,7 @@ html {
         flex-direction: column;
         justify-content: flex-end;
         background: rgba($black, 0.7);
-        padding: 1.85rem 1.8rem;
+        padding: 1.85rem 1.8rem 0.5rem 1.8rem;
         opacity: 0;
         transition: opacity $animation-speed ease-in-out;
     }

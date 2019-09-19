@@ -80,3 +80,9 @@
 
 
 }
+
+.test:focus {
+    .card-body {
+        opacity: 1;
+    }
+}

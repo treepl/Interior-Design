@@ -112,7 +112,10 @@ function initCustomInfoCarousel() {
         ;init(condition);
 
     function init(condition) {
+
+        
         if(condition || condition == null) {
+
 
             var carouselGallerySlider = $('.teamSliderHolder .slideset').bxSlider({
                 slideSelector : $('.teamSliderHolder .slide'),

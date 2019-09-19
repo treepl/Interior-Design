@@ -75,6 +75,12 @@
     }
 }
 
+.cards-list {
+    @include media-breakpoint-down(xs) { 
+        margin-bottom: 30px;
+    }   
+}
+
 .team-slider {
 
     .card {
@@ -188,8 +194,6 @@
 
     .card-body {
         padding: rem(16) 0;
-
-
     }
 
     .card-title{
@@ -209,6 +213,5 @@
         display: inline-block;
         vertical-align: top;
         margin-bottom: rem(12);
-
     }
 }
