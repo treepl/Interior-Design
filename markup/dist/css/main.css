@@ -18192,6 +18192,9 @@ img {
     left: 10px; }
   .custom-carousel .btn-next {
     right: 10px; }
+  @media (max-width: 991.98px) {
+    .custom-carousel .bx-wrapper {
+      margin: 0 auto; } }
 
 .breadcrumb-item + .breadcrumb-item:before {
   font-family: "icomoon";
@@ -18594,6 +18597,9 @@ textarea.form-control {
   background: rgba(0, 0, 0, 0.7);
   padding: 1.85rem 2.1rem;
   opacity: 0; }
+  @media (max-width: 991.98px) {
+    .team-slider .hover-block {
+      padding: 10px; } }
 
 .team-slider .card-title {
   margin-bottom: 0;
