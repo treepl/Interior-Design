@@ -1,22 +1,21 @@
 <!doctype html>
 <html lang="en">
-
-<head>
-    {% include "/includes/head.inc" %}
-</head>
-<body>
-    <noscript>
-        <div>Javascript must be enabled for the correct page display</div>
-    </noscript>
-    <section id="wrapper">
-        {% component type: "snippet", alias: "header" %}
-        <main role="main" id="main">
-            {{pageContent}}
-        </main>
-        {% component type: "snippet", alias: "footer" %}
-        {% component type: "snippet", alias: "access_key" %}
-    </section>
-</body>
+    <head>
+        {% include "/includes/head.inc" %}
+    </head>
+    <body>
+        <noscript>
+            <div>Javascript must be enabled for the correct page display</div>
+        </noscript>
+        <section id="wrapper">
+            {% component type: "snippet", alias: "header" %}
+            <main role="main" id="main">
+                {{pageContent}}
+            </main>
+            {% component type: "snippet", alias: "footer" %}
+            {% component type: "snippet", alias: "access_key" %}
+        </section>
+    </body>
 </html>
 
 

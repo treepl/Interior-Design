@@ -1,21 +1,20 @@
 <!doctype html>
 <html lang="en">
-<head>
-    {% include "/includes/head.inc" %}
-</head>
-<body>
-    <noscript>
-        <div>Javascript must be enabled for the correct page display</div>
-    </noscript>
-    <section id="wrapper">
-        {% component type: "snippet", alias: "header" %}
-        <main role="main" id="main">
-            {{pageContent}}
-        </main>
-    </section>
-{% include "/includes/map.inc" %}    
-{% component type: "snippet", alias: "footer" %}
-{% component type: "snippet", alias: "access_key" %}
-<script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key={{siteinformation.site_information.api_key}}"></script>
-</body>
+    <head>
+        {% include "/includes/head.inc" %}
+    </head>
+    <body>
+        <noscript>
+            <div>Javascript must be enabled for the correct page display</div>
+        </noscript>
+        <section id="wrapper">
+            {% component type: "snippet", alias: "header" %}
+            <main id="main">
+                {{pageContent}}
+            </main>
+        </section>
+    {% component type: "snippet", alias: "map" %}
+    {% component type: "snippet", alias: "footer" %}
+    {% component type: "snippet", alias: "access_key" %}
+    </body>
 </html>

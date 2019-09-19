@@ -1,78 +1,75 @@
 <!doctype html>
 <html lang="en">
-
-<head>
-{% include "/includes/head.inc" %}
-</head>
-
-<body>
-    <noscript>
-        <div>Javascript must be enabled for the correct page display</div>
-    </noscript>
-   <section id="wrapper">
-      {% component type: "snippet", alias: "header" %}
-      <main role="main" id="main">
-            {{pageContent}}
-         <section id="carouselExampleFade" class="carousel slide carousel-fade visual" data-ride="carousel">
-            <ol class="carousel-indicators">
-              {% component source: "Home page slider", layout: "Indicators list", limit: "100", type: "module" %}
-            </ol>
-            <div class="carousel-inner">
-               {% component source: "Home page slider", layout: "List", limit: "100", type: "module" %}
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-               <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-               <span class="carousel-control-next-icon" aria-hidden="true"></span>
-               <span class="sr-only">Next</span>
-            </a>
-         </section>
-         <section class="section">
-            <div class="container">
-               {% component type: "snippet", alias: "cards-list" %}
-               <div class="text-center">
-                  <a href="/about" class="btn btn-primary">more about us</a>
-               </div>
-            </div>
-         </section>
-         <section class="section bg-block">
-            <h1 class="h2 text-center">projects</h1>
-            {% component type: "snippet", alias: "projects_list" %}
-            <div class="text-center">
-               <a href="/projects" class="btn btn-primary">see more projects</a>
-            </div>
+    <head>
+        {% include "/includes/head.inc" %}
+    </head>
+    <body>
+        <noscript>
+            <div>Javascript must be enabled for the correct page display</div>
+        </noscript>
+        <section id="wrapper">
+            {% component type: "snippet", alias: "header" %}
+            <main id="main">
+                {{pageContent}}
+                <section id="carouselExampleFade" class="carousel slide carousel-fade visual" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                      {% component source: "Home page slider", layout: "Indicators list", limit: "100", type: "module" %}
+                    </ol>
+                    <div class="carousel-inner">
+                       {% component source: "Home page slider", layout: "List", limit: "100", type: "module" %}
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                       <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+                       <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                       <span class="sr-only">Next</span>
+                    </a>
+                </section>
+                <section class="section" id="content">
+                    <div class="container">
+                       {% component type: "snippet", alias: "cards_list" %}
+                       <div class="text-center">
+                          <a href="/about" class="btn btn-primary">more about us</a>
+                       </div>
+                    </div>
+                </section>
+                <section class="section bg-block">
+                    <h1 class="h2 text-center">projects</h1>
+                    {% component type: "snippet", alias: "projects_list" %}
+                    <div class="text-center">
+                       <a href="/projects" class="btn btn-primary">see more projects</a>
+                    </div>
+                </section>
+                <section class="section">
+                    {% component type: "snippet", alias: "team_members" %}     
+                </section>
+                <section class="visual-banner text-light text-center" style="background-image:url(images/img-05.jpg)">
+                    <div class="container">
+                        <div class="row">
+                           {% component source: "Counter", layout: "List", limit: "4", type: "module" %}
+                        </div>
+                    </div>
+                </section>
+                <section class="section">
+                    <div class="container">
+                        <h1 class="h2 text-center">testimonials</h1>
+                        <div class="custom-carousel testimonials-slider textSliderHolder">
+                            <div class="slideset">
+                                {% component source: "Testimonials Slider", layout: "List", limit: "500", type: "module" %}
+                            </div>
+                            <div class="controls">
+                                <a href="#" class="btn-prev"> <i class="icon icon-left-arrow"></i> </a>
+                                <a href="#" class="btn-next"><i class="icon icon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
         </section>
-        <section class="section">
-            {% component type: "snippet", alias: "team_members" %}     
-        </section>
-        <section class="visual-banner text-light text-center" style="background-image:url(images/img-05.jpg)">
-            <div class="container">
-                <div class="row">
-                   {% component source: "Counter", layout: "List", limit: "4", type: "module" %}
-                </div>
-            </div>
-         </section>
-         <section class="section">
-            <div class="container">
-               <h1 class="h2 text-center">testimonials</h1>
-               <div class="custom-carousel testimonials-slider textSliderHolder">
-                  <div class="slideset">
-                    {% component source: "Testimonials Slider", layout: "List", limit: "500", type: "module" %}
-                  </div>
-                  <div class="controls">
-                     <a href="#" class="btn-prev"> <i class="icon icon-left-arrow"></i> </a>
-                     <a href="#" class="btn-next"><i class="icon icon-right-arrow"></i></a>
-                  </div>
-               </div>
-            </div>
-         </section>
-      </main>
-   </section>
-{% include "/includes/map.inc" %}    
-{% component type: "snippet", alias: "footer" %}
-{% component type: "snippet", alias: "access_key" %}
-<script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key={{siteinformation.site_information.api_key}}"></script>
-</body>
+    {% component type: "snippet", alias: "map" %}   
+    {% component type: "snippet", alias: "footer" %}
+    {% component type: "snippet", alias: "access_key" %}
+    </body>
 </html>

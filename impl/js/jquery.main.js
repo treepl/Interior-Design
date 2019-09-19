@@ -106,41 +106,84 @@ function initCardsSorting() {
     }
 }
 
+
 function initCustomInfoCarousel() {
+
     var condition = $('.teamSliderHolder').size()
-        // && false
-        ;init(condition);
-
+    // && false
+    ;
+    init(condition);
+  
     function init(condition) {
-        if(condition || condition == null) {
-
+        if (condition || condition == null) {
+  
             var carouselGallerySlider = $('.teamSliderHolder .slideset').bxSlider({
-                slideSelector : $('.teamSliderHolder .slide'),
-                pager : true,
-                controls : false,
-                auto : false,
+                slideSelector: $('.teamSliderHolder .slide'),
+                pager: true,
+                controls: false,
+                auto: false,
                 touchEnabled: false,
                 minSlides: 1,
                 maxSlides: 4,
-                moveSlides: 3,
+                moveSlides: 1,
                 slideWidth: 270,
                 shrinkItems: true,
-                slideMargin : 30,
-                infiniteLoop : true
+                slideMargin: 30,
+                infiniteLoop: true
             });
-
+  
             $('.teamSliderHolder .btn-next').click(function() {
                 carouselGallerySlider.goToNextSlide();
-
+  
                 return false;
             });
-
+  
+  
             $('.teamSliderHolder .btn-prev').click(function() {
                 carouselGallerySlider.goToPrevSlide();
-
+  
                 return false;
             });
-
+  
+            ResponsiveHelper.addRange({
+                '500..': {
+                    on: function() {
+                        carouselGallerySlider.destroySlider();
+                        carouselGallerySlider.reloadSlider({
+                            slideSelector: $('.teamSliderHolder .slide'),
+                            pager: true,
+                            controls: false,
+                            auto: false,
+                            touchEnabled: false,
+                            minSlides: 1,
+                            maxSlides: 4,
+                            moveSlides: 1,
+                            slideWidth: 270,
+                            shrinkItems: true,
+                            slideMargin: 30,
+                            infiniteLoop: true
+                        });
+  
+                    },
+                    off: function() {
+                        carouselGallerySlider.destroySlider();
+                        carouselGallerySlider.reloadSlider({
+                            slideSelector: $('.teamSliderHolder .slide'),
+                            pager: true,
+                            controls: false,
+                            auto: false,
+                            touchEnabled: false,
+                            minSlides: 1,
+                            maxSlides: 1,
+                            moveSlides: 1,
+                            slideWidth: 270,
+                            shrinkItems: true,
+                            slideMargin: 30,
+                            infiniteLoop: true
+                        });
+                    }
+                }
+            });
         }
     }
 }

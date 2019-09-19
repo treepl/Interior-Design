@@ -1,13 +1,13 @@
 <section class="banner text-white text-center" style="background-image:url({{this['BannerImage']}})">
-<span class="overlay"></span>
-<div class="container">
-   <h1>{{this['Name']}}</h1>
-   <nav aria-label="breadcrumb ">
-      <ol class="breadcrumb justify-content-center">
-         <li class="breadcrumb-item " aria-current="page">Home</li>
-         {% component source: "Projects", layout: "List Breadcrumbs", filterBy:"id", filterValue:"{{this.parentid}}", type: "module" %}
-         <li class="breadcrumb-item active"><a href="#">{{this['Name']}}</a></li>
-      </ol>
-   </nav>
-</div>
+    <span class="overlay"></span>
+    <div class="container">
+        <h1>{{this['Name']}}</h1>
+        <nav aria-label="breadcrumb ">
+            <ol class="breadcrumb justify-content-center">
+                <li class="breadcrumb-item " aria-current="page"><a href="/">Home</a></li>
+                {% component source: "Projects", layout: "List Breadcrumbs", filterBy:"id", filterValue:"{{this.parentid}}", type: "module" %}
+                <li class="breadcrumb-item active"><a href="#">{{this['Name']}}</a></li>
+            </ol>
+        </nav>
+    </div>
 </section>

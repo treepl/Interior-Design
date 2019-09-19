@@ -1,39 +1,39 @@
 {% component source: "Main Banner", layout: "List", filterBy: "name", filterValue: "About Us", limit: "1", type: "module" %}
 <section class="section" id="content">
     <div class="container">
-       <h2 class="text-center">About agency</h2>
-       <div class="row">
-          <div class="col-md-6">
-             <img src="images/img-06.jpg" alt="design photo" class="mb-3">
-          </div>
-          <div class="col-md-6">
-             <p>Donec auctor, arcu sit amet mollis vehicula, erat leo feugiat est, id porta ante dolor blandit ipsum. Sed maximus turpis accumsan, aliquam odio a, placerat risus. Maecenas a nibh ut lectus malesuada auctor non in purus. Fusce elementum nisl sit amet laoreet dapibus. Aliquam vitae ipsum quam. </p>
-             <p>Morbi quis sem vel lorem rutrum lobortis. Aliquam erat volutpat. Nunc sollicitudin diam urna, quis accumsan erat venenatis at. Morbi vestibulum non ipsum quis lobortis.</p>
-             <h3 class="h4">Why Choose Us</h3>
-             <ul>
-                <li>Nullam a suscipit tellus. </li>
-                <li>Suspendisse est dolor, pharetra sed porta quis, mollis vulputate nibh.</li>
-                <li>Fusce at massa ultrices, interdum enim quis, aliquam leo. </li>
-                <li>Vestibulum viverra nibh a sapien venenatis varius. </li>
-             </ul>
-          </div>
-       </div>
+        <h2 class="text-center">About agency</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="images/img-06.jpg" alt="design photo" class="mb-3">
+            </div>
+            <div class="col-md-6">
+                <p>Donec auctor, arcu sit amet mollis vehicula, erat leo feugiat est, id porta ante dolor blandit ipsum. Sed maximus turpis accumsan, aliquam odio a, placerat risus. Maecenas a nibh ut lectus malesuada auctor non in purus. Fusce elementum nisl sit amet laoreet dapibus. Aliquam vitae ipsum quam. </p>
+                <p>Morbi quis sem vel lorem rutrum lobortis. Aliquam erat volutpat. Nunc sollicitudin diam urna, quis accumsan erat venenatis at. Morbi vestibulum non ipsum quis lobortis.</p>
+                <h3 class="h4">Why Choose Us</h3>
+                <ul>
+                    <li>Nullam a suscipit tellus. </li>
+                    <li>Suspendisse est dolor, pharetra sed porta quis, mollis vulputate nibh.</li>
+                    <li>Fusce at massa ultrices, interdum enim quis, aliquam leo. </li>
+                    <li>Vestibulum viverra nibh a sapien venenatis varius. </li>
+                 </ul>
+            </div>
+        </div>
     </div>
 </section>
 <section class="section bg-block">
     <div class="container">
-        {% component type: "snippet", alias: "cards-list" %}   
+        {% component type: "snippet", alias: "cards_list" %}
     </div>
 </section>
 <section class="visual-banner text-light text-center" style="background-image:url(images/img-05.jpg)">
     <div class="container">
-       <div class="row">
+        <div class="row">
            {% component source: "Counter", layout: "List", limit: "4", type: "module" %}
         </div>
     </div>
 </section>
 <section class="section">
-   {% component type: "snippet", alias: "team_members" %}
+    {% component type: "snippet", alias: "team_members" %}
 </section>
                   
                   
