@@ -18104,15 +18104,18 @@ img {
 .carousel-control-next {
   width: 11%; }
 
-.carousel-control-prev-icon:before,
-.carousel-control-next-icon:before {
-  font-family: "icomoon";
-  font-size: 30px;
-  line-height: 1; }
-  @media (min-width: 992px) {
-    .carousel-control-prev-icon:before,
-    .carousel-control-next-icon:before {
-      font-size: 50px; } }
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  line-height: 4.5; }
+  .carousel-control-prev-icon:before,
+  .carousel-control-next-icon:before {
+    font-family: "icomoon";
+    font-size: 30px;
+    line-height: 1; }
+    @media (min-width: 992px) {
+      .carousel-control-prev-icon:before,
+      .carousel-control-next-icon:before {
+        font-size: 50px; } }
 
 .carousel-control-prev-icon {
   background: none; }
@@ -18564,6 +18567,15 @@ textarea.form-control {
       @media (min-width: 992px) {
         .visual .carousel-caption h1 {
           margin-bottom: 1.9rem; } }
+  .visual .carousel-control-prev,
+  .visual .carousel-control-next {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    height: 100px; }
+    .visual .carousel-control-prev:focus,
+    .visual .carousel-control-next:focus {
+      outline: 1px solid #ffa000; }
 
 @media (max-width: 575.98px) {
   .cards-list {
