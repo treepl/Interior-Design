@@ -1,5 +1,3 @@
-
-
 html {
     font-size: 15px;
 
@@ -14,7 +12,27 @@ html {
     flex-direction: column;
 }
 
+a:focus {
+    outline-color: $primary;
+}
 
+a:focus-within {
+    outline-color: $primary;
+}
+
+button:focus {
+    outline-color: $primary;
+}
+
+.btn-primary:focus {
+    box-shadow: none;
+    outline: 1px solid $primary;
+}
+
+.btn-secondary:focus {
+    box-shadow: none;
+    outline: 1px solid $primary;
+}   
 
 #header.sticky+#main {
 
@@ -45,7 +63,7 @@ html {
 
 .navbar-nav {
     .nav-item:last-child a{
-        padding-right: 0;
+        padding-right: 20px;
     }
 }
 
@@ -69,6 +87,9 @@ html {
         .btn {
             @extend .btn-primary;
             color: $white;
+            &:focus {
+                box-shadow: none;
+            }
         }
     }
 
@@ -104,7 +125,8 @@ html {
         text-align: center;
         width: 40px;
         height: 40px;
-        font-size: 25px;
+        font-size: 34px;
+        padding: 28px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -113,13 +135,13 @@ html {
         opacity: 0;
         transition: opacity $animation-speed ease-in-out;
 
-        @include media-breakpoint-up(lg) {
+       /* @include media-breakpoint-up(lg) {
             width: 40px;
             height: 40px;
             font-size: 30px;
             padding-bottom: 5px;
 
-        }
+        }*/
 
         &:before {
             content: "+";

@@ -1,17 +1,42 @@
 [id="header"] {
     min-height: var(--header-min-height);
     background-color: $gray-800;
+
+    .navbar {
+        .nav-item {
+            a:hover {
+                color: $primary;
+            }
+        }
+    }
+
+    .dropdown-toggle:after {
+        content: "\e911";
+        font-family: icomoon;
+        position: absolute;
+        top: 14px;
+        right: auto;
+        font-size: 15px;
+        font-weight: 800;
+        border-top: none;
+
+    }
 }
 
 .dropdown-menu {
     background-color: transparent;
+    left: auto;
+    right: 0;
 
     @include media-breakpoint-up(lg) {
         background-color: $dropdown-bg;
-        border-top: 4px solid orange;
+        border-top: 4px solid $primary;
+        transform: translateY(6px);
     }
 
     .dropdown-item {
+
+        white-space: normal;
 
         .navbar-dark & {
             color: $navbar-dark-color;
@@ -25,11 +50,15 @@
         &:focus {
 
             background-color: inherit;
-            color: $navbar-dark-hover-color;
+            color: $primary;
 
         }
 
     }
+}
+
+.nav-item.dropdown.show .dropdown-menu {
+    display: block;
 }
 
 .navbar-brand {

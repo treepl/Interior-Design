@@ -1,5 +1,14 @@
 .btn-primary,
-.tbn-secondary {
+.btn-secondary {
     text-transform: uppercase;
     color: $white;
+  
 }
+
+.btn-primary {
+    &:hover {
+        background-color: #ff8a00;
+        border-color: #ff8a00;
+    }
+}
+

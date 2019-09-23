@@ -21,28 +21,28 @@
             pointer-events: none;
             opacity: 0.6;
         }
+    }
 
-        &:after {
-            content: "";
-            min-height: calc(100vh - 58px);
-            display: inline-block;
-            vertical-align: middle;
-            width: 0;
-        }
+    .carousel-item {
+        background-size: cover;
+        background-position: 50% 50%;
+        height: calc(100vh - 65px);
     }
 
     .carousel-caption {
-        position: relative;
+
         font-size: $font-size-base;
-        max-width: 680px;
+        width: 85%;
         white-space: normal;
-        display: inline-block;
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
         vertical-align: middle;
-        bottom: auto;
-        left: auto;
-        right: auto;
         padding-left: 40px;
         padding-right: 40px;
+        @include media-breakpoint-down(sm) {
+            padding: 20px 10px;
+        }
 
 
         .text {
@@ -80,18 +80,38 @@
         top: 50%;
         transform: translateY(-50%);
         height: 100px;
-    
-    &:focus {
-        outline: 1px solid $primary;
+
+        &:focus {
+            outline: 1px solid $primary;
+        }
     }
-}
+
+    .carousel-indicators {
+
+        bottom: 33px;
+
+        li {
+            position: relative;
+            height: 0;
+        }
+
+        button {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            display: block;
+            border-radius: 50%;
+            padding: 3px;
+            border-style: solid;
+        }
+    }
 
 }
 
 .cards-list {
-    @include media-breakpoint-down(xs) { 
+    @include media-breakpoint-down(xs) {
         margin-bottom: 30px;
-    }   
+    }
 }
 
 .team-slider {
@@ -127,6 +147,7 @@
         background: rgba($black, 0.7);
         padding: 1.85rem 2.1rem;
         opacity: 0;
+
         @include media-breakpoint-down(md) {
             padding: 10px;
         }
@@ -212,9 +233,10 @@
         padding: rem(16) 0;
     }
 
-    .card-title{
+    .card-title {
         text-transform: none;
     }
+
     .name,
     .position {
         display: block;
