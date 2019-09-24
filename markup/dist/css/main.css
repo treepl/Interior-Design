@@ -18372,14 +18372,7 @@ button:focus {
     z-index: 1;
     text-decoration: none;
     opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    /* @include media-breakpoint-up(lg) {
-            width: 40px;
-            height: 40px;
-            font-size: 30px;
-            padding-bottom: 5px;
-
-        }*/ }
+    transition: opacity 0.3s ease-in-out; }
     .portfolio-list .link:before {
       content: "+"; }
     .portfolio-list .link:hover {
@@ -18500,6 +18493,12 @@ textarea.form-control {
   position: static;
   width: auto;
   height: auto; }
+
+.google-map-holder {
+  height: 500px; }
+  @media (max-width: 767.98px) {
+    .google-map-holder {
+      height: 300px; } }
 
 [id="footer"] {
   padding: 40px 0; }
