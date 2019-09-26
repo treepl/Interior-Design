@@ -10,13 +10,15 @@
         }
     }
 
+    .phone-group {
+        .holder:first-child {
+            margin-bottom: 10px;
+        }
+    }
+
     .holder {
         position: relative;
         padding-left: 27px;
-
-        &+.holder {
-            padding-top: 10px;
-        }
 
         .icon {
             position: absolute;

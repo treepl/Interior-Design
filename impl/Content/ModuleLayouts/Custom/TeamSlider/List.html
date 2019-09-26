@@ -1,18 +1,26 @@
 <div class="slide">
     <div class="card">
         <div class="img-block">
-            <img src="{{this['Image']}}" class="card-img-top" alt="Person photo">
+            <img src="{{this['Image']}}?width=265&height=350&mode=crop" class="card-img-top" alt="Person photo">
             <div class="hover-block">
                 <ul class="info">
-                    <li class="position">{{this['Position']}}</li>
-                    {% if this['Phone'].size > 0 -%}
-                        <li>{{this['Phone']}}</li>
-                    {% endif -%}
+                    {% if this['Position'].size > 0 %}
+                        <li class="position">{{this['Position']}}</li>
+                    {% endif %}
+                    {% if this['Phone'].size > 0 %}
+                        <li><a href="tel:{{this['Phone']}}">{{this['Phone']}}</a></li>
+                    {% endif %}
                 </ul>
                 <ul class="social-networks">
-                    <li><a href="{{this['FacebookLink']}}"><i class="icon icon-facebook">facebook</i></a></li>
-                    <li><a href="{{this['TwitterLink']}}"><i class="icon icon-twitter">twitter</i></a></li>
-                    <li><a href="{{this['InstagramLink']}}"><i class="icon icon-instagram">instagram</i></a></li>
+                    {% if this['FacebookLink'].size > 0 %}
+                        <li><a href="{{this['FacebookLink']}}"><i class="icon icon-facebook"></i></a></li>
+                    {% endif %}
+                    {% if this['TwitterLink'].size > 0 %}
+                        <li><a href="{{this['TwitterLink']}}"><i class="icon icon-twitter"></i></a></li>
+                    {% endif %}
+                    {% if this['InstagramLink'].size > 0 %}
+                        <li><a href="{{this['InstagramLink']}}"><i class="icon icon-instagram"></i></a></li>
+                    {% endif %}
                 </ul>
             </div>
         </div>

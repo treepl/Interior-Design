@@ -29,7 +29,10 @@
                 </div>
                 <section class="section" id="content">
                     <div class="container">
-                        {% component type: "snippet", alias: "info_block" %}
+                        <h1 class="h2 text-center">What we doing</h1>
+                        <div class="row cards-list">
+                           {% component source: "Our Directions", layout: "List", filterBy: "weighting", limit: "3", type: "module" %}
+                        </div>
                         <div class="text-center">
                             <a href="/about" class="btn btn-primary">more about us</a>
                         </div>
@@ -37,7 +40,19 @@
                 </section>
                 <section class="section bg-block">
                     <h1 class="h2 text-center">projects</h1>
-                    {% component type: "snippet", alias: "projects_list" %}
+                    <div class="container">
+                        <nav>
+                            <ul class="portfolio-nav cardsFilterBTNHolder">
+                             <li class="active"><a href="#" class="btn btn-secondary" data-filter="*">All projects</a></li>
+                             <li><a href="#" class="btn btn-secondary" data-filter=".office">Office</a></li>
+                             <li><a href="#" class="btn btn-secondary" data-filter=".apartment">Apartment</a></li>
+                             <li><a href="#" class="btn btn-secondary" data-filter=".commercial">Commercial</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="row portfolio-list cardsFilterGridHolder ajaxListHolder">
+                        {% component source: "Projects", layout: "List", limit: "6", sortBy: "releasedate", sortOrder: "DESC", type: "module" %}
+                    </div>
                     <div class="text-center">
                        <a href="/projects" class="btn btn-primary">see more projects</a>
                     </div>
@@ -51,19 +66,15 @@
                         <h1 class="h2 text-center">testimonials</h1>
                         <div class="custom-carousel testimonials-slider textSliderHolder">
                             <div class="slideset">
-                                {% component source: "Testimonials Slider", layout: "List", limit: "500", type: "module" %}
-                            </div>
-                            <div class="controls">
-                                <a href="#" class="btn-prev"> <i class="icon icon-left-arrow"></i> </a>
-                                <a href="#" class="btn-next"><i class="icon icon-right-arrow"></i></a>
+                                {% component source: "Testimonials Slider", layout: "List", sortBy: "releasedate", sortOrder: "DESC", limit: "500", type: "module" %}
                             </div>
                         </div>
                     </div>
                 </section>
             </main>
         </section>
-    {% component type: "snippet", alias: "map" %}   
-    {% component type: "snippet", alias: "footer" %}
-    {% component type: "snippet", alias: "access_key" %}
+        {% component type: "snippet", alias: "map" %}   
+        {% component type: "snippet", alias: "footer" %}
+        {% component type: "snippet", alias: "access_key" %}
     </body>
 </html>

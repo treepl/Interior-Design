@@ -1,10 +1,11 @@
 html {
     font-size: 15px;
+    
 
     @include media-breakpoint-up(lg) {
         font-size: 16px;
     }
-}
+}  
 
 #wrapper {
     display: flex;
@@ -13,20 +14,24 @@ html {
 }
 
 a:focus {
-    outline-color: $primary;
+    
+    outline: 1px solid $primary;
 }
 
 a:focus-within {
-    outline-color: $primary;
+    
+    outline: 1px solid $primary;
 }
 
 button:focus {
-    outline-color: $primary;
+   
+    outline: 1px solid $primary;
 }
 
 .btn-primary:focus {
     box-shadow: none;
     outline: 1px solid $primary;
+    background-color: #ff8a00;
 }
 
 .btn-secondary:focus {
@@ -63,7 +68,7 @@ button:focus {
 
 .navbar-nav {
     .nav-item:last-child a{
-        padding-right: 20px;
+        padding-right: 22px;
     }
 }
 
@@ -81,6 +86,10 @@ button:focus {
 
     .btn {
         text-transform: uppercase;
+        &:hover {
+            background-color: $primary;
+            border-color: $primary;
+        }
     }
 
     .active {
@@ -96,12 +105,16 @@ button:focus {
 
 .portfolio-list {
     max-width: 1920px;
-    margin: 0 auto 30px;
+    margin: 0 auto 10px;
+
+    @include media-breakpoint-up(md) {
+        margin: 0 auto 30px;
+    }
 
     .card {
         color: $white;
         position: relative;
-        margin-bottom: 18px;
+        margin-bottom: 30px;
 
 
         &:hover,
@@ -122,10 +135,9 @@ button:focus {
         transform: translate(-50%, -50%);
         border: 1px solid $white;
         text-align: center;
-        width: 40px;
-        height: 40px;
-        font-size: 34px;
-        padding: 28px;
+        width: 44px;
+        height: 44px;
+        font-size: 16px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -136,7 +148,13 @@ button:focus {
 
 
         &:before {
-            content: "+";
+            content: "\e912";
+            font-family: 'icomoon' !important;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         &:hover {
@@ -302,10 +320,18 @@ textarea.form-control {
 .google-map-holder {
     height: 500px;
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(md) {
         height: 300px;
     }
 }
+
+.portfolio-list {
+    .pagination {
+        display: none;
+    }
+
+}
+
 
 
 

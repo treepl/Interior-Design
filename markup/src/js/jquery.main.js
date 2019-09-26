@@ -61,7 +61,7 @@ function initProjectsCarousel() {
             });
 
             $('.carouselGalleryHolder .btn-prev').click(function() {
-                _thumbSlider.goToPrevSlide();
+                _thumbSlider.goToPrevSlide();и
 
                 return false;
             });
@@ -118,102 +118,39 @@ function initCustomInfoCarousel() {
     function init(condition) {
         if (condition || condition == null) {
   
-            var carouselGallerySlider = $('.teamSliderHolder .slideset').bxSlider({
-                slideSelector: $('.teamSliderHolder .slide'),
-                pager: true,
-                controls: false,
-                auto: false,
-                touchEnabled: false,
-                minSlides: 1,
-                maxSlides: 4,
-                moveSlides: 4,
-                slideWidth: 270,
-                shrinkItems: true,
-                slideMargin: 30,
-                startSlide: 0,
-                infiniteLoop: true
+            $('.teamSliderHolder .slideset').slick({
+                dots: true,
+                prevArrow: '<button class="slick-prev" aria-label="Previous" type="button" tabindex="0"><i class="icon icon-left-arrow"></i> </button>',
+                nextArrow: '<button class="slick-next" aria-label="Next" type="button" tabindex="0"><i class="icon icon-right-arrow"></i></button>',
+                infinite: true,
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                responsive: [
+                    {
+                        breakpoint: 1200,
+                        settings: {
+                          slidesToShow: 3,
+                          slidesToScroll: 3
+                        }
+                      },
+                    {
+                      breakpoint: 980,
+                      settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                      }
+                    },
+                    {
+                      breakpoint: 690,
+                      settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                      }
+                    }
+                  ]
             });
             
-            ResponsiveHelper.addRange({
-                '768..960': {
-                    on: function() {
-                        carouselGallerySlider.destroySlider();
-                        carouselGallerySlider.reloadSlider({
-                            slideSelector: $('.teamSliderHolder .slide'),
-                            pager: true,
-                            controls: false,
-                            auto: false,
-                            touchEnabled: false,
-                            minSlides: 1,
-                            maxSlides: 3,
-                            moveSlides: 3,
-                            slideWidth: 270,
-                            shrinkItems: true,
-                            slideMargin: 30,
-                            startSlide: 0,
-                            infiniteLoop: true
-                        });
-  
-                    }
-                },
-                '..768': {
-                    on: function() {
-                        carouselGallerySlider.destroySlider();
-                        carouselGallerySlider.reloadSlider({
-                            slideSelector: $('.teamSliderHolder .slide'),
-                            pager: true,
-                            controls: false,
-                            auto: false,
-                            touchEnabled: false,
-                            minSlides: 1,
-                            maxSlides: 2,
-                            moveSlides: 2,
-                            slideWidth: 270,
-                            shrinkItems: true,
-                            slideMargin: 30,
-                            startSlide: 0,
-                            infiniteLoop: true
-                        });
-  
-                    }
-                },
-                '..460': {
-                    on: function() {
-                        carouselGallerySlider.destroySlider();
-                        carouselGallerySlider.reloadSlider({
-                            slideSelector: $('.teamSliderHolder .slide'),
-                            pager: true,
-                            controls: false,
-                            auto: false,
-                            touchEnabled: false,
-                            minSlides: 1,
-                            maxSlides: 1,
-                            moveSlides: 1,
-                            slideWidth: 270,
-                            shrinkItems: true,
-                            slideMargin: 30,
-                            startSlide: 0,
-                            infiniteLoop: true
-                        });
-  
-                    }
-                }
-            });
-  
-            $('.teamSliderHolder .btn-next').click(function() {
-                carouselGallerySlider.goToNextSlide();
-  
-                return false;
-            });
-  
-            $('.teamSliderHolder .btn-prev').click(function() {
-                carouselGallerySlider.goToPrevSlide();
-  
-                return false;
-            });
-  
-        }
-        
+        }   
     }
 }
 
@@ -225,32 +162,27 @@ function initCustomTextCarousel() {
     function init(condition) {
         if(condition || condition == null) {
 
-            var carouselGallerySlider = $('.textSliderHolder .slideset').bxSlider({
-                slideSelector : $('.textSliderHolder .slide'),
-                pager : true,
-                controls : false,
-                auto : false,
-                touchEnabled: false,
-                minSlides: 1,
-                maxSlides: 2,
-                moveSlides: 2,
-                slideWidth: 570,
-                shrinkItems: true,
-                slideMargin : 30,
-                infiniteLoop : true
+            var carouselGallerySlider = $('.textSliderHolder .slideset').slick({
+                dots: true,
+                prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"><i class="icon icon-left-arrow"></i> </button>',
+                nextArrow: '<button class="slick-next" aria-label="Next" type="button"><i class="icon icon-right-arrow"></i></button>',
+                infinite: true,
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                responsive: [
+                    
+                    {
+                      breakpoint: 1200,
+                      settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                      }
+                    }
+           
+                  ]
             });
 
-            $('.textSliderHolder .btn-next').click(function() {
-                carouselGallerySlider.goToNextSlide();
-
-                return false;
-            });
-
-            $('.textSliderHolder .btn-prev').click(function() {
-                carouselGallerySlider.goToPrevSlide();
-
-                return false;
-            });
+           
 
         }
     }

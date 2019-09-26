@@ -7,6 +7,10 @@
             a:hover {
                 color: $primary;
             }
+
+            &:focus {
+                outline: 1px solid $primary;
+            }
         }
     }
 
@@ -15,7 +19,7 @@
         font-family: icomoon;
         position: absolute;
         top: 14px;
-        right: auto;
+        right: 2px;
         font-size: 15px;
         font-weight: 800;
         border-top: none;
@@ -24,6 +28,7 @@
 }
 
 .dropdown-menu {
+    padding: 0 2px;
     background-color: transparent;
     left: auto;
     right: 0;

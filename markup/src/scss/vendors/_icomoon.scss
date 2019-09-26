@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon/icomoon.eot?r0qeyu');
-  src:  url('../fonts/icomoon/icomoon.eot?r0qeyu#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon/icomoon.woff2?r0qeyu') format('woff2'),
-    url('../fonts/icomoon/icomoon.ttf?r0qeyu') format('truetype'),
-    url('../fonts/icomoon/icomoon.woff?r0qeyu') format('woff'),
-    url('../fonts/icomoon/icomoon.svg?r0qeyu#icomoon') format('svg');
+  src:  url('../fonts/icomoon/icomoon.eot?h6yg28');
+  src:  url('../fonts/icomoon/icomoon.eot?h6yg28#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon/icomoon.woff2?h6yg28') format('woff2'),
+    url('../fonts/icomoon/icomoon.ttf?h6yg28') format('truetype'),
+    url('../fonts/icomoon/icomoon.woff?h6yg28') format('woff'),
+    url('../fonts/icomoon/icomoon.svg?h6yg28#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -26,6 +26,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-plus:before {
+  content: "\e912";
+}
 .icon-angle-down-solid:before {
   content: "\e911";
 }

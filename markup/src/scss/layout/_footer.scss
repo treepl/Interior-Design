@@ -1,5 +1,6 @@
 [id="footer"] {
     padding: 40px 0;
+    color: $gray-300;
 
     .logotype {
         padding-bottom: rem(14);
@@ -8,7 +9,7 @@
     .box {
         margin-bottom: 20px;
     }
-
+ 
     .more {
         vertical-align: middle;
 
@@ -39,6 +40,40 @@
             color: $primary;
         }
     }
+
+    .social-networks {
+        color: $white;
+        margin: 0 -5px;
+
+        a {
+            color: inherit;
+            line-height: 30px;
+            font-size: 20px;
+            width: 30px;
+            height: 30px;
+            border: 1px solid $gray-400;
+            display: block;
+
+            &:hover {
+                color: $primary;
+                border: 1px solid $primary;
+            }
+        }
+
+        li {
+            padding: 0 10px 5px;
+        }
+
+        .icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            border: none;
+            font-size: 17px;
+        }
+    }
 }
 
 .add-nav {
@@ -60,7 +95,6 @@
     }
 
     a {
-        color: inherit;
         text-decoration: none;
     }
 }
