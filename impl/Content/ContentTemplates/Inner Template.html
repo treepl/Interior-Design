@@ -7,14 +7,14 @@
         <noscript>
             <div>Javascript must be enabled for the correct page display</div>
         </noscript>
-        <section id="wrapper">
+        <div id="wrapper">
             {% component type: "snippet", alias: "header" %}
             <main id="main">
                 {{pageContent}}
             </main>
-        </section>
-        {% component type: "snippet", alias: "map" %}
-        {% component type: "snippet", alias: "footer" %}
-        {% component type: "snippet", alias: "access_key" %}
+            {% component type: "snippet", alias: "map" %}
+            {% component type: "snippet", alias: "footer" %}
+            {% component type: "snippet", alias: "access_key" %}
+        </div>
     </body>
 </html>

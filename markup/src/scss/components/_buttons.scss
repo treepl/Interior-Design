@@ -16,3 +16,30 @@
     font-weight: 500;
 }
 
+a:focus {
+
+    outline: 1px solid $primary;
+}
+
+a:focus-within {
+
+    outline: 1px solid $primary;
+}
+
+button:focus {
+
+    outline: 1px solid $primary;
+}
+
+.btn-primary:focus {
+    box-shadow: none;
+    outline: 1px solid $primary;
+    background-color: #ff8a00;
+}
+
+.btn-secondary:focus {
+    box-shadow: none;
+    outline: 1px solid $primary;
+}
+
+ 

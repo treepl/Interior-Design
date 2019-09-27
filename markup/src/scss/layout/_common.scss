@@ -1,43 +1,17 @@
 html {
     font-size: 15px;
-    
+
 
     @include media-breakpoint-up(lg) {
         font-size: 16px;
     }
-}  
+}
 
 #wrapper {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
 }
-
-a:focus {
-    
-    outline: 1px solid $primary;
-}
-
-a:focus-within {
-    
-    outline: 1px solid $primary;
-}
-
-button:focus {
-   
-    outline: 1px solid $primary;
-}
-
-.btn-primary:focus {
-    box-shadow: none;
-    outline: 1px solid $primary;
-    background-color: #ff8a00;
-}
-
-.btn-secondary:focus {
-    box-shadow: none;
-    outline: 1px solid $primary;
-}   
 
 #header.sticky+#main {
 
@@ -67,7 +41,7 @@ button:focus {
 }
 
 .navbar-nav {
-    .nav-item:last-child a{
+    .nav-item:last-child a {
         padding-right: 22px;
     }
 }
@@ -86,6 +60,7 @@ button:focus {
 
     .btn {
         text-transform: uppercase;
+
         &:hover {
             background-color: $primary;
             border-color: $primary;
@@ -96,6 +71,7 @@ button:focus {
         .btn {
             @extend .btn-primary;
             color: $white;
+
             &:focus {
                 box-shadow: none;
             }
@@ -116,9 +92,9 @@ button:focus {
         position: relative;
         margin-bottom: 30px;
 
-
         &:hover,
-        &:focus-within {
+        &:focus-within,
+        &:focus {
 
             .link,
             .card-body {
@@ -146,7 +122,6 @@ button:focus {
         opacity: 0;
         transition: opacity $animation-speed ease-in-out;
 
-
         &:before {
             content: "\e912";
             font-family: 'icomoon' !important;
@@ -163,7 +138,6 @@ button:focus {
         }
 
     }
-
 
     .card-body {
         position: absolute;
@@ -251,7 +225,6 @@ button:focus {
 
     li {
         padding: 0 10px 5px;
-
     }
 
     a {
@@ -277,12 +250,10 @@ button:focus {
         overflow: hidden;
         border: 1px solid $gray-400;
 
-
         &:before {
             text-indent: 0;
             display: block;
         }
-
 
     }
 }
@@ -303,18 +274,19 @@ textarea.form-control {
     min-height: 140px;
 }
 
-.accessibility{
-    position:absolute;
-    left:-10000px;
-    top:auto;
-    width:1px;
-    height:1px;
-    overflow:hidden;
+.accessibility {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
-.accessibility:focus{
-    position:static;
-    width:auto;
-    height:auto;
+
+.accessibility:focus {
+    position: static;
+    width: auto;
+    height: auto;
 }
 
 .google-map-holder {
@@ -332,7 +304,35 @@ textarea.form-control {
 
 }
 
+.hover {
 
+    .link {
+        opacity: 1;
+    }
+
+    .hover-block {
+        opacity: 1!important;
+    }
+}
+
+.hover .card-body, 
+.card-body:focus {
+    opacity: 1;
+} 
+
+.card:focus {
+    .link {
+        opacity: 1;
+    }
+    .hover-block {
+        opacity: 1!important;
+    }
+}
+
+.hover-block:focus, 
+.hover .hover-block{
+    opacity: 1;
+}
 
 
 

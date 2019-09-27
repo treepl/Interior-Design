@@ -18114,6 +18114,24 @@ img {
 .btn {
   font-weight: 500; }
 
+a:focus {
+  outline: 1px solid #ffa000; }
+
+a:focus-within {
+  outline: 1px solid #ffa000; }
+
+button:focus {
+  outline: 1px solid #ffa000; }
+
+.btn-primary:focus, .portfolio-nav .active .btn:focus {
+  box-shadow: none;
+  outline: 1px solid #ffa000;
+  background-color: #ff8a00; }
+
+.btn-secondary:focus {
+  box-shadow: none;
+  outline: 1px solid #ffa000; }
+
 .carousel-control-prev,
 .carousel-control-next {
   width: 11%; }
@@ -18287,24 +18305,6 @@ html {
   -ms-flex-direction: column;
       flex-direction: column; }
 
-a:focus {
-  outline: 1px solid #ffa000; }
-
-a:focus-within {
-  outline: 1px solid #ffa000; }
-
-button:focus {
-  outline: 1px solid #ffa000; }
-
-.btn-primary:focus, .portfolio-nav .active .btn:focus {
-  box-shadow: none;
-  outline: 1px solid #ffa000;
-  background-color: #ff8a00; }
-
-.btn-secondary:focus {
-  box-shadow: none;
-  outline: 1px solid #ffa000; }
-
 @media (min-width: 576px) {
   #header.sticky + #main {
     padding-top: 40px; } }
@@ -18365,7 +18365,8 @@ button:focus {
     margin-bottom: 30px; }
     .portfolio-list .card:hover .link,
     .portfolio-list .card:hover .card-body, .portfolio-list .card:focus-within .link,
-    .portfolio-list .card:focus-within .card-body {
+    .portfolio-list .card:focus-within .card-body, .portfolio-list .card:focus .link,
+    .portfolio-list .card:focus .card-body {
       opacity: 1; }
   .portfolio-list .link {
     color: inherit;
@@ -18528,11 +18529,33 @@ textarea.form-control {
 .portfolio-list .pagination {
   display: none; }
 
+.hover .link {
+  opacity: 1; }
+
+.hover .hover-block {
+  opacity: 1 !important; }
+
+.hover .card-body,
+.card-body:focus {
+  opacity: 1; }
+
+.card:focus .link {
+  opacity: 1; }
+
+.card:focus .hover-block {
+  opacity: 1 !important; }
+
+.hover-block:focus,
+.hover .hover-block {
+  opacity: 1; }
+
 [id="footer"] {
   padding: 40px 0;
   color: #e0e0e0; }
   [id="footer"] .logotype {
     padding-bottom: 0.875rem; }
+    [id="footer"] .logotype a {
+      display: inline-block; }
   [id="footer"] .box {
     margin-bottom: 20px; }
   [id="footer"] .more {
@@ -18714,7 +18737,7 @@ textarea.form-control {
 .team-slider .card {
   position: relative;
   margin: 0 auto; }
-  .team-slider .card:hover .hover-block, .team-slider .card:focus-within .hover-block {
+  .team-slider .card:hover .hover-block, .team-slider .card:focus-within .hover-block, .team-slider .card:focus .hover-block {
     opacity: 1; }
   @media (min-width: 768px) {
     .team-slider .card {
@@ -18801,7 +18824,7 @@ textarea.form-control {
 .slick-dots {
   position: absolute;
   right: 0;
-  bottom: -55px;
+  bottom: -80px;
   left: 0;
   z-index: 15;
   display: -ms-flexbox;

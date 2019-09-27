@@ -5,14 +5,14 @@
         <a class="link masonryGalleryLightbox" href="{{this['Image']}}" data-fancybox="images{{this['Id']}}"></a>
         <div class="card-body">
             <h5 class="card-title">
-                <a href="{{this['Url']}}">
+               <a href="{{this['Url']}}">
                     {% if this.name.size > 45 %}
                         {{this['Name'] | truncate: 45, '...'}} 
                     {% else %}
                         {{this['Name']}} 
                     {% endif %}
                       <i class="icon icon-long-arrow-right"></i>
-                </a>
+                </a> 
             </h5>
         </div>
     </div>

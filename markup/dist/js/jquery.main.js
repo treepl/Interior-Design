@@ -8,11 +8,22 @@ jQuery(function () {
     initCounterFunction();
     initTabNav();
     initTabNavDrop();
-    
+    initHoverForEdge();
+    initTabProjects();
+    initTabTeam();
 });
-// $('.dropdown-toggle').dropdown();
 
-// TODO
+
+function initHoverForEdge() {
+	jQuery('.card').hover(function() {
+        $(this).addClass('hover');
+    });
+    
+    $('.card').mouseleave(function() {
+        $(this).removeClass('hover');
+    });
+}
+
 
 function initHeaderHeight(){
 
@@ -122,7 +133,7 @@ function initCustomInfoCarousel() {
                 dots: true,
                 prevArrow: '<button class="slick-prev" aria-label="Previous" type="button" tabindex="0"><i class="icon icon-left-arrow"></i> </button>',
                 nextArrow: '<button class="slick-next" aria-label="Next" type="button" tabindex="0"><i class="icon icon-right-arrow"></i></button>',
-                infinite: true,
+                infinite: false,
                 slidesToShow: 4,
                 slidesToScroll: 4,
                 responsive: [
@@ -288,6 +299,18 @@ function initTabNavDrop() {
 	jQuery('#navbarNavDropdown li.dropdown').tabNav({
 		hoverClass: 'show',
 		items: '.dropdown-menu'
+	});
+}
+function initTabProjects() {
+	jQuery('.portfolio-list').tabNav({
+		hoverClass: 'hover',
+		items: '.card'
+	});
+}
+function initTabTeam() {
+	jQuery('.team-slider').tabNav({
+		hoverClass: 'hover',
+		items: '.card'
 	});
 }
 
