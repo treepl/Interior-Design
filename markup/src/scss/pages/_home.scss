@@ -49,7 +49,6 @@
             top: 25%;
         }
 
-
         .text {
 
             line-height: 1.5;
@@ -73,7 +72,6 @@
 
             @include media-breakpoint-up(sm) {
                 font-size: $h1-font-size;
-                // margin-bottom: 1.5rem;
             }
 
             @include media-breakpoint-up(lg) {
@@ -81,7 +79,6 @@
             }
 
             @include media-breakpoint-down(xs) {}
-
         }
     }
 
@@ -307,7 +304,6 @@
     }
 }
 
-
 .visual-banner {
     background-size: cover;
     padding: 46px 0;
@@ -359,7 +355,6 @@
             left: -60px;
             font-size: 50px;
         }
-
     }
 
     .slick-next {
@@ -381,8 +376,6 @@
 }
 
 .testimonials-slider {
-
-
     .card {
         padding: rem(25) rem(15);
         margin: 0 auto;

@@ -1,6 +1,5 @@
 .projects-gallery {
 
-
     .mask {
         text-align: center;
         margin-bottom: 30px;
@@ -20,9 +19,7 @@
             a:hover {
                 border-color: $primary;
             }
-
         }
-
     }
 
     .btn-prev,
@@ -60,7 +57,6 @@
         }
     }
 
-
     img {
         margin: 0;
     }
@@ -77,8 +73,6 @@
             }
         }
     }
-
-
 }
 
 .test:focus {

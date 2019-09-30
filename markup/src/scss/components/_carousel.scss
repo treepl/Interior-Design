@@ -43,7 +43,6 @@
     border-radius: 50%;
 }
 
-
 .custom-carousel {
     position: relative;
     margin-bottom: 41px;
@@ -76,8 +75,6 @@
         @include media-breakpoint-up(lg) {
             bottom: -60px;
         }
-
-
 
         .bx-pager-item {
             display: inline-block;

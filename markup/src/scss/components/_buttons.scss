@@ -1,14 +1,13 @@
 .btn-primary,
 .btn-secondary {
     text-transform: uppercase;
-    color: $white;
-  
+    color: $white;  
 }
 
 .btn-primary {
     &:hover {
-        background-color: #ff8a00;
-        border-color: #ff8a00;
+        background-color: $btn-focus;
+        border-color: $btn-focus;
     }
 }
 
@@ -34,12 +33,11 @@ button:focus {
 .btn-primary:focus {
     box-shadow: none;
     outline: 1px solid $primary;
-    background-color: #ff8a00;
+    background-color: $btn-focus;
 }
 
 .btn-secondary:focus {
     box-shadow: none;
     outline: 1px solid $primary;
 }
-
  

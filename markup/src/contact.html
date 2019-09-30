@@ -6,13 +6,14 @@
 </head>
 
 <body>
-        <noscript>
-                <div>Javascript must be enabled for the correct page display</div>
-             </noscript>
-    <section id="wrapper">
+    <noscript>
+        <div>Javascript must be enabled for the correct page display</div>
+    </noscript>
+    <div id="wrapper">
         //= template/header.html
-        <main  id="main">
-            <section class="banner text-white text-center" style="background-image:url(images/inner-banners/bg-04.jpg) ">
+        <main id="main">
+            <section class="banner text-white text-center"
+                style="background-image:url(images/inner-banners/bg-04.jpg) ">
                 <span class="overlay"></span>
                 <div class="container">
                     <h1>Contacts</h1>
@@ -40,15 +41,18 @@
                                 <div class="form-group">
                                     <input type="Email" class="form-control" placeholder="Your E-mail">
                                 </div>
-                                <div class="form-group mb-5"> 
-                                    <textarea class="form-control" placeholder="Whrite your question here" rows="3"></textarea>
+                                <div class="form-group mb-5">
+                                    <textarea class="form-control" placeholder="Whrite your question here"
+                                        rows="3"></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </form>
                         </div>
                         <div class="col-md-5 col-lg-4">
                             <h4>Our Office</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pellentesque accumsan ipsum, vel facilisis sem vehicula fringilla. Pellentesque venenatis ac mi in pellentesque. Nam sit amet tellus at neque finibus consequat vitae nec magna. </p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pellentesque accumsan
+                                ipsum, vel facilisis sem vehicula fringilla. Pellentesque venenatis ac mi in
+                                pellentesque. Nam sit amet tellus at neque finibus consequat vitae nec magna. </p>
                             <ul class="list-group contact-info">
                                 <li class="list-group-item">
                                     <div class="holder">
@@ -66,7 +70,8 @@
                                 </li>
                                 <li class="list-group-item">
                                     <div class="holder">
-                                        <i class="icon icon-envelope"></i> <a href="mailto:support@interior.com">support@interior.com</a>
+                                        <i class="icon icon-envelope"></i> <a
+                                            href="mailto:support@interior.com">support@interior.com</a>
                                     </div>
                                 </li>
                                 <li class="list-group-item ">
@@ -83,12 +88,10 @@
                     </div>
                 </div>
             </section>
-
             //= template/snippets/map.html
         </main>
-    </section>
-
-    //= template/footer.html
+        //= template/footer.html
+    </div>
 </body>
 
 </html>

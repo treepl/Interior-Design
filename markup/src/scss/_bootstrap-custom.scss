@@ -25,13 +25,7 @@ $danger: #e75160;
 $warning: #f5c85b;
 $info: #f28041;
 
-
-// $theme-colors: ("primary": $primary,
-// "secondary": #313439,
-// "succes": #28a746,
-// "danger": #dd3546,
-// "warning": #ffc107,
-// "info": #ff5a00);
+$btn-focus: #ff8a00;
 
 $spacer: 1rem;
 
@@ -46,7 +40,6 @@ $body-color:                $gray-900 ;
 // 
 // Font, line-height, and color for body text, headings, and more.
 
-
 $font-family-sans-serif: 'Muli',
 BlinkMacSystemFont,
 "Segoe UI",
@@ -59,7 +52,6 @@ sans-serif,
 "Segoe UI Symbol",
 "Noto Color Emoji";
 $font-family-base: $font-family-sans-serif;
-
 
 
 $font-size-base: 0.9375rem;
