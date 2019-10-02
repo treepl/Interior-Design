@@ -19,6 +19,10 @@
 </head>
 
 <body>
+   <noscript>
+      <div>Javascript must be enabled for the correct page display</div>
+   </noscript>
+   <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
    <div id="wrapper">
       <header id="header" class="sticky-top header">
           <a href="#" data-toggle="modal" data-target="#access" accesskey="0" aria-controls="access" aria-haspopup="true"
@@ -52,9 +56,9 @@
                                   Extra
                               </a>
                               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                  <a class="dropdown-item" href="#">Action</a>
-                                  <a class="dropdown-item" href="#">Another action</a>
-                                  <a class="dropdown-item" href="#">Something else here</a>
+                                  <a class="dropdown-item" href="/404.html">404</a>
+                                  <a class="dropdown-item" href="/coming-soon.html">Coming Soon</a>
+                                  <a class="dropdown-item" href="/thank-you.html">Thank You</a>
                               </div>
                           </li>
                       </ul>
@@ -62,7 +66,7 @@
               </div>
           </nav>
       </header>
-      <main  id="main">
+      <main id="main">
          <section class="banner text-white text-center" style="background-image:url(images/inner-banners/bg-02.jpg) ">
             <span class="overlay"></span>
             <div class="container">
@@ -70,12 +74,12 @@
                <nav aria-label="breadcrumb ">
                   <ol class="breadcrumb justify-content-center">
                      <li class="breadcrumb-item " aria-current="page">Home</li>
-                     <li class="breadcrumb-item active"><a href="#">Projects</a></li>
+                     <li class="breadcrumb-item active"><a href="/projects.html">Projects</a></li>
                   </ol>
                </nav>
             </div>
          </section>
-         <section class="section">
+         <section class="section" id="content">
              <div class="container">
                  <nav>
                      <ul class="portfolio-nav cardsFilterBTNHolder">

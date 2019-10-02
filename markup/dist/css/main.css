@@ -18474,7 +18474,8 @@ html {
     padding: 0 10px 5px; }
   .social-networks a {
     color: inherit;
-    text-decoration: none; }
+    text-decoration: none;
+    display: block; }
     .social-networks a:hover {
       color: #ffa000; }
       .social-networks a:hover i {
@@ -18741,7 +18742,7 @@ textarea.form-control {
     opacity: 1; }
   @media (min-width: 768px) {
     .team-slider .card {
-      margin: 0 15px; } }
+      margin: 0 5px; } }
 
 .team-slider .img-block {
   position: relative; }

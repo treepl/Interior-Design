@@ -6,6 +6,10 @@
 </head>
 
 <body>
+    <noscript>
+        <div>Javascript must be enabled for the correct page display</div>
+    </noscript>
+    <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
     <div id="wrapper">
         //= template/header.html
         <main id="main">
@@ -23,7 +27,7 @@
                     </nav>
                 </div>
             </section>
-            <section class="section">
+            <section class="section" id="content">
                 <div class="container">
                     <h1 class="h2 text-center">About the Project</h1>
                     <div class="row">
