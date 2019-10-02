@@ -40,42 +40,25 @@ function initProjectsCarousel() {
     function init(condition) {
         if(condition || condition == null) {
 
-            var _bigSlider = $('.carouselGalleryHolder .imageHolder').bxSlider({
-                mode : 'fade',
-                slideSelector : '.slide',
-                adaptiveHeight : true,
-                pagerCustom : $('.carouselGalleryHolder .thumbnail ul'),
-                controls : false,
-                onSlideAfter : function($slideElement, oldIndex, newIndex)
-                {
-                    $('.carouselGalleryHolder .thumbnail ul li').removeClass('active');
-                    $('.carouselGalleryHolder .thumbnail ul li').eq(newIndex).addClass('active');
-                }
-            });
+            var _bigSlider = $('.carouselGalleryHolder .imageHolder').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                fade: true,
+                asNavFor: '.carouselGalleryHolder .thumbnail ul'
+              });
 
-            var _thumbSlider = $('.carouselGalleryHolder .thumbnail ul').bxSlider({
-                slideMargin : 10, 
-                infiniteLoop : false,
-                pager : false,
-                controls : false,
-                minSlides : 2,
-                maxSlides : 4,
-                touchEnabled: false,
-                moveSlides : 1,
-                slideWidth : 118
-            });
-
-            $('.carouselGalleryHolder .btn-next').click(function() {
-                _thumbSlider.goToNextSlide();
-
-                return false;
-            });
-
-            $('.carouselGalleryHolder .btn-prev').click(function() {
-                _thumbSlider.goToPrevSlide();
-
-                return false;
-            });
+    
+            var _thumbSlider = $('.carouselGalleryHolder .thumbnail ul').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                asNavFor: '.carouselGalleryHolder .imageHolder',
+                dots: false,
+                centerMode: true,
+                prevArrow: '<button class="slick-prev" aria-label="Previous" type="button" tabindex="0"><i class="icon icon-left-arrow"></i> </button>',
+                nextArrow: '<button class="slick-next" aria-label="Next" type="button" tabindex="0"><i class="icon icon-right-arrow"></i></button>',
+                focusOnSelect: true
+              });
         }
     }
 }
