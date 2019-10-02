@@ -3197,4 +3197,3 @@ window.ResponsiveHelper = (function($){
     };
 
 }));
-

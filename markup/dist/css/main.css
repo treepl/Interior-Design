@@ -18172,11 +18172,15 @@ button:focus {
       padding: 0 45px; } }
   @media (min-width: 1200px) {
     .custom-carousel {
-      padding: 0; } }
+      padding: 0;
+      margin-left: -15px;
+      margin-right: -15px; } }
   .custom-carousel .slideset,
   .custom-carousel .slide {
     display: -ms-flexbox;
     display: flex; }
+  .custom-carousel .slide {
+    padding: 0 15px; }
   .custom-carousel .bx-pager {
     font-size: 0;
     line-height: 0;
@@ -18740,9 +18744,6 @@ textarea.form-control {
   margin: 0 auto; }
   .team-slider .card:hover .hover-block, .team-slider .card:focus-within .hover-block, .team-slider .card:focus .hover-block {
     opacity: 1; }
-  @media (min-width: 768px) {
-    .team-slider .card {
-      margin: 0 5px; } }
 
 .team-slider .img-block {
   position: relative; }
@@ -18894,8 +18895,8 @@ textarea.form-control {
   z-index: 1; }
   @media (min-width: 768px) {
     .slick-slider .slick-prev {
-      left: -60px;
-      font-size: 50px; } }
+      left: -55px;
+      font-size: 45px; } }
 
 .slick-slider .slick-next {
   position: absolute;
@@ -18910,22 +18911,22 @@ textarea.form-control {
   font-size: 40px; }
   @media (min-width: 768px) {
     .slick-slider .slick-next {
-      right: -60px;
-      font-size: 50px; } }
+      right: -55px;
+      font-size: 45px; } }
 
 .testimonials-slider .card {
   padding: 1.5625rem 0.9375rem;
   margin: 0 auto; }
   @media (min-width: 992px) {
     .testimonials-slider .card {
-      padding: 1.5625rem 0;
-      margin: 0 15px; } }
+      padding: 25px 0 30px; } }
 
 .testimonials-slider .card-body {
-  padding: 1rem 0; }
+  padding: 1.125rem 0; }
 
 .testimonials-slider .card-title {
-  text-transform: none; }
+  text-transform: none;
+  margin-bottom: 1.6875rem; }
 
 .testimonials-slider .name,
 .testimonials-slider .position {
@@ -18936,12 +18937,16 @@ textarea.form-control {
 
 .testimonials-slider .name {
   font-size: 1.125rem;
-  margin-bottom: 0.8125rem; }
+  margin-bottom: 0.8125rem;
+  padding: 0 0.9375rem; }
 
 .testimonials-slider img {
   display: inline-block;
   vertical-align: top;
   margin-bottom: 0.75rem; }
+
+.testimonials-slider .slick-dots {
+  bottom: -70px; }
 
 .projects-gallery .mask {
   text-align: center;
