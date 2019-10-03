@@ -72,7 +72,7 @@ function initProjectsCarousel() {
             });
 
             $('.carouselGalleryHolder .btn-prev').click(function() {
-                _thumbSlider.goToPrevSlide();и
+                _thumbSlider.goToPrevSlide();
 
                 return false;
             });
