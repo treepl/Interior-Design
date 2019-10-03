@@ -18958,7 +18958,9 @@ textarea.form-control {
   .projects-gallery .thumbnail-wrap li {
     padding: 1px;
     margin: 1px; }
-  .projects-gallery .thumbnail-wrap button {
+    .projects-gallery .thumbnail-wrap li:focus {
+      outline: none; }
+  .projects-gallery .thumbnail-wrap button.holder {
     padding: 0;
     margin: 0 5px;
     border: 0; }

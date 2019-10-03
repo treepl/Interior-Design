@@ -12,12 +12,16 @@
         li {
             padding: 1px;
             margin: 1px;
+            &:focus {
+                outline: none;
+            }
         }
 
-        button {
+        button.holder {
             padding: 0;
             margin: 0 5px;
             border: 0;
+            
         }
 
     }
