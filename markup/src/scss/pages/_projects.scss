@@ -10,16 +10,16 @@
         position: relative;
 
         li {
-            >a {
-                display: block;
-                border: 2px solid transparent;
-            }
-
-            &.active a,
-            a:hover {
-                border-color: $primary;
-            }
+            padding: 1px;
+            margin: 1px;
         }
+
+        button {
+            padding: 0;
+            margin: 0 5px;
+            border: 0;
+        }
+
     }
 
     .btn-prev,

@@ -18955,12 +18955,13 @@ textarea.form-control {
 .projects-gallery .thumbnail-wrap {
   padding: 0 33px;
   position: relative; }
-  .projects-gallery .thumbnail-wrap li > a {
-    display: block;
-    border: 2px solid transparent; }
-  .projects-gallery .thumbnail-wrap li.active a,
-  .projects-gallery .thumbnail-wrap li a:hover {
-    border-color: #ffa000; }
+  .projects-gallery .thumbnail-wrap li {
+    padding: 1px;
+    margin: 1px; }
+  .projects-gallery .thumbnail-wrap button {
+    padding: 0;
+    margin: 0 5px;
+    border: 0; }
 
 .projects-gallery .btn-prev,
 .projects-gallery .btn-next {
