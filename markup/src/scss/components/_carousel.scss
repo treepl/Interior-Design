@@ -1,7 +1,6 @@
 .carousel-control-prev,
 .carousel-control-next {
     width: 11%;
-
 }
 
 .carousel-control-prev-icon,
@@ -13,7 +12,6 @@
         font-family: "icomoon";
         font-size: 30px;
         line-height: 1;
-
 
         @include media-breakpoint-up(lg) {
             font-size: 50px;
@@ -141,5 +139,4 @@
             margin: 0 auto;
         }
     }
-
 }
