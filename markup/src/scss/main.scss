@@ -21,21 +21,20 @@ $media-expressions: (
 
 
 // Icon fonts
-//@import 'vendors/fontawesome_free/fontawesome';
-//@import 'vendors/fontawesome_free/brands';
-//@import 'vendors/fontawesome_free/regular';
-//@import 'vendors/fontawesome_free/solid';
-//@import 'vendors/fontawesome_free/v4-shims';
+@import 'vendors/fontawesome_free/fontawesome';
+@import 'vendors/fontawesome_free/brands';
+@import 'vendors/fontawesome_free/regular';
+@import 'vendors/fontawesome_free/solid';
+@import 'vendors/fontawesome_free/v4-shims';
 
 
-@import 'vendors/fontawesome_pro/fontawesome'; 
-@import 'vendors/fontawesome_pro/brands';
-@import 'vendors/fontawesome_pro/solid';
-@import 'vendors/fontawesome_pro/regular';
-@import 'vendors/fontawesome_pro/v4-shims';
-@import 'vendors/fontawesome_pro/light';
-@import 'vendors/fontawesome_pro/duotone';
- 
+//@import 'vendors/fontawesome_pro/fontawesome'; 
+//@import 'vendors/fontawesome_pro/brands';
+//@import 'vendors/fontawesome_pro/solid';
+//@import 'vendors/fontawesome_pro/regular';
+//@import 'vendors/fontawesome_pro/v4-shims';
+//@import 'vendors/fontawesome_pro/light';
+//@import 'vendors/fontawesome_pro/duotone';
 
 @import 'vendors/icomoon';  
 @import 'vendors/fancybox';  
