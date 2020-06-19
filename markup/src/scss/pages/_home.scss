@@ -148,11 +148,15 @@
                 opacity: 1;
             }
         }
-
-        // @include media-breakpoint-up(md) {
-        //    margin: 0 5px;
-        // }
     }
+
+    .slide {
+        padding: 0 30px;
+        @include media-breakpoint-up(md) {
+            padding: 0 15px;
+        }
+    }
+
 
     .img-block {
         position: relative;
@@ -345,7 +349,7 @@
 .slick-slider {
     .slick-prev {
         position: absolute;
-        left: -40px;
+        left: -25px;
         transform: translateY(-50%);
         top: 50%;
         border: 0;
@@ -365,7 +369,7 @@
     .slick-next {
         position: absolute;
         left: auto;
-        right: -40px;
+        right: -25px;
         transform: translateY(-50%);
         top: 50%;
         border: 0;

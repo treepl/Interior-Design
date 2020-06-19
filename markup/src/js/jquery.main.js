@@ -135,7 +135,7 @@ function initCustomInfoCarousel() {
                       }
                     },
                     {
-                      breakpoint: 690,
+                      breakpoint: 520,
                       settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1
@@ -307,7 +307,7 @@ function initComingSoonCountDown() {
     function init(condition) {
         if(condition || condition == null) {
             $('.comingSoonTimerHolder').countdowntimer({
-                dateAndTime : "2019/11/11 00:00:00",
+                dateAndTime : "2020/09/09 00:00:00",
                 size : "lg",
                 regexpMatchFormat : "([0-9]{1,3}):([0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2})",
                 regexpReplaceWith : '<div class="column"> <div class="holder"> <span>$1</span> <p>days</p></div></div><div class="column"> <div class="holder"> <span>$2</span> <p>hours</p></div></div><div class="column"> <div class="holder"> <span>$3</span> <p>minutes</p></div></div><div class="column"> <div class="holder"> <span>$4</span> <p>seconds</p></div></div>'

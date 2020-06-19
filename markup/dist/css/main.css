@@ -18435,6 +18435,11 @@ html {
 .portfolio-list {
   max-width: 1920px;
   margin: 0 auto 10px; }
+  .portfolio-list .col:last-of-type .card {
+    margin-bottom: 0; }
+    @media (min-width: 768px) {
+      .portfolio-list .col:last-of-type .card {
+        margin-bottom: 30px; } }
   @media (min-width: 992px) {
     .portfolio-list {
       margin: 0 auto 30px; } }
@@ -18629,6 +18634,11 @@ textarea.form-control {
 .hover .hover-block {
   opacity: 1; }
 
+@media (min-width: 768px) {
+  .float-sm-right {
+    width: 50%;
+    padding-left: 25px; } }
+
 [id="footer"] {
   padding: 40px 0;
   color: #e0e0e0; }
@@ -18820,6 +18830,12 @@ textarea.form-control {
   .team-slider .card:hover .hover-block, .team-slider .card:focus-within .hover-block, .team-slider .card:focus .hover-block {
     opacity: 1; }
 
+.team-slider .slide {
+  padding: 0 30px; }
+  @media (min-width: 768px) {
+    .team-slider .slide {
+      padding: 0 15px; } }
+
 .team-slider .img-block {
   position: relative; }
 
@@ -18962,7 +18978,7 @@ textarea.form-control {
 
 .slick-slider .slick-prev {
   position: absolute;
-  left: -40px;
+  left: -25px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   top: 50%;
@@ -18981,7 +18997,7 @@ textarea.form-control {
 .slick-slider .slick-next {
   position: absolute;
   left: auto;
-  right: -40px;
+  right: -25px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   top: 50%;
@@ -19135,7 +19151,8 @@ textarea.form-control {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
-      align-items: center; }
+      align-items: center;
+  min-height: 430px; }
   .system-section .container {
     display: -ms-flexbox;
     display: flex;
@@ -19145,33 +19162,39 @@ textarea.form-control {
         justify-content: center; }
   @media (min-width: 992px) {
     .system-section.thankyou .jumbotron {
-      padding: 4.1875rem 2.8125rem; } }
+      padding: 67px 45px; } }
   .system-section.comming .jumbotron {
     padding-left: 10px;
     padding-right: 10px;
     margin: 0; }
     @media (min-width: 992px) {
       .system-section.comming .jumbotron {
-        padding: 4.1875rem 1.875rem; } }
+        padding: 67px 30px; } }
   .system-section .jumbotron {
     background: rgba(255, 255, 255, 0.8);
     max-width: 740px;
-    padding: 1.25rem;
-    margin: 1.875rem 0.9375rem; }
+    padding: 40px 20px;
+    margin: 30px 15px; }
     @media (min-width: 992px) {
       .system-section .jumbotron {
-        padding: 1.9375rem 2.8125rem;
+        padding: 31px 45px;
         width: 740px; } }
     .system-section .jumbotron h2 {
-      margin-bottom: 0.625rem; }
+      margin-bottom: 10px;
+      font-size: 25px; }
+      @media (min-width: 768px) {
+        .system-section .jumbotron h2 {
+          font-size: 35px; } }
       @media (min-width: 992px) {
         .system-section .jumbotron h2 {
-          margin-bottom: 1.375rem; } }
+          margin-bottom: 22px; } }
     .system-section .jumbotron .lead {
-      line-height: 1.7; }
+      line-height: 1.7;
+      font-size: 16px; }
       @media (min-width: 992px) {
         .system-section .jumbotron .lead {
-          margin-bottom: 2.6875rem; } }
+          margin-bottom: 43px;
+          font-size: 18px; } }
   .system-section .large-text {
     font-size: 60px;
     line-height: 1;
