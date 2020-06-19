@@ -26,6 +26,14 @@
 
     }
 
+    .slick-slide:focus {
+       
+        &:focus {
+            outline-color: $primary;
+            border: 1px solid $primary;
+        }
+    } 
+    
     .btn-prev,
     .btn-next {
         position: absolute;
@@ -62,7 +70,7 @@
     }
 
     img {
-        margin: 0;
+        margin: 0 auto;
     }
 
     ul {

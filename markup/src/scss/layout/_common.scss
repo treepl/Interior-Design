@@ -33,7 +33,7 @@ html {
 
 .section {
     position: relative;
-    padding: $section-indent/2 0;
+    padding: $section-indent-small 0;
 
     @include media-breakpoint-up(lg) {
         padding: $section-indent 0;
@@ -83,7 +83,7 @@ html {
     max-width: 1920px;
     margin: 0 auto 10px;
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
         margin: 0 auto 30px;
     }
 

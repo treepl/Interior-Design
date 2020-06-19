@@ -254,7 +254,7 @@
 .slick-dots {
     position: absolute;
     right: 0;
-    bottom: -80px;
+    bottom: -55px;
     left: 0;
     z-index: 15;
     display: flex;
@@ -263,6 +263,9 @@
     margin-right: 15%;
     margin-left: 15%;
     list-style: none;
+    @include media-breakpoint-up(md) {
+        bottom: -80px;
+    }
 
     li {
         button {
@@ -350,10 +353,12 @@
         color: $black;
         font-size: 40px;
         z-index: 1;
+        display: none;
 
         @include media-breakpoint-up(md) {
             left: -55px;
             font-size: 45px;
+            display: block;
         }
     }
 
@@ -367,10 +372,12 @@
         background-color: inherit;
         color: $black;
         font-size: 40px;
+        display: none;
 
         @include media-breakpoint-up(md) {
             right: -55px;
             font-size: 45px;
+            display: block;
         }
     }
 }
@@ -378,7 +385,7 @@
 .testimonials-slider {
     .card {
         padding: rem(25) rem(15);
-        margin: 0 auto;
+        margin: 5px auto;
 
         @include media-breakpoint-up(lg) {
             padding: 25px 0 30px;
@@ -387,7 +394,7 @@
     }
 
     .card-body {
-        padding: rem(18) 0;
+        padding: rem(18) rem(15);
     }
 
     .card-title {
@@ -417,6 +424,9 @@
     }
 
     .slick-dots {
-        bottom: -70px;
+        @include media-breakpoint-up(md) {
+            bottom: -70px;
+        }
+       
     }
 }

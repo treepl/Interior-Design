@@ -166,7 +166,7 @@ function initCustomTextCarousel() {
                 responsive: [
                     
                     {
-                      breakpoint: 1200,
+                      breakpoint: 992,
                       settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1
