@@ -13,6 +13,10 @@
     }
 
     &.thankyou .jumbotron {
+       
+        @include media-breakpoint-up(md) {
+            padding: 65px;
+        }
         @include media-breakpoint-up(lg) {
             padding: 67px 45px;
         }

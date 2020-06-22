@@ -18436,7 +18436,7 @@ html {
   max-width: 1920px;
   margin: 0 auto 10px; }
   .portfolio-list .col:last-of-type .card {
-    margin-bottom: 0; }
+    margin-bottom: 20px; }
     @media (min-width: 768px) {
       .portfolio-list .col:last-of-type .card {
         margin-bottom: 30px; } }
@@ -18647,7 +18647,10 @@ textarea.form-control {
     [id="footer"] .logotype a {
       display: inline-block; }
   [id="footer"] .box {
-    margin-bottom: 20px; }
+    margin-bottom: 35px; }
+    @media (min-width: 768px) {
+      [id="footer"] .box {
+        margin-bottom: 20px; } }
   [id="footer"] .more {
     vertical-align: middle; }
     [id="footer"] .more:hover {
@@ -18987,12 +18990,12 @@ textarea.form-control {
   color: #000;
   font-size: 40px;
   z-index: 1;
-  display: none; }
+  display: none !important; }
   @media (min-width: 768px) {
     .slick-slider .slick-prev {
       left: -55px;
       font-size: 45px;
-      display: block; } }
+      display: block !important; } }
 
 .slick-slider .slick-next {
   position: absolute;
@@ -19005,12 +19008,12 @@ textarea.form-control {
   background-color: inherit;
   color: #000;
   font-size: 40px;
-  display: none; }
+  display: none !important; }
   @media (min-width: 768px) {
     .slick-slider .slick-next {
       right: -55px;
       font-size: 45px;
-      display: block; } }
+      display: block !important; } }
 
 .testimonials-slider .card {
   padding: 1.5625rem 0.9375rem;
@@ -19160,6 +19163,9 @@ textarea.form-control {
         align-items: center;
     -ms-flex-pack: center;
         justify-content: center; }
+  @media (min-width: 768px) {
+    .system-section.thankyou .jumbotron {
+      padding: 65px; } }
   @media (min-width: 992px) {
     .system-section.thankyou .jumbotron {
       padding: 67px 45px; } }
