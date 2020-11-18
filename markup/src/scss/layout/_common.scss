@@ -79,6 +79,13 @@ html {
     }
 }
 
+.section.portfolio-section {
+    padding: 50px 0 0;
+    @include media-breakpoint-up(lg) {
+        padding: 75px 0 30px;
+    }
+}
+
 .portfolio-list {
     max-width: 1920px;
     margin: 0 auto 10px;
@@ -90,7 +97,7 @@ html {
         }
     }
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xl) {
         margin: 0 auto 30px;
     }
 

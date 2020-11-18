@@ -45,24 +45,13 @@
     position: relative;
     margin-bottom: 41px;
     padding: 0;
-    
-
-    @include media-breakpoint-up(md) {
-        margin-bottom: 71px;
-        padding: 0 45px;
-    }
-
-    @include media-breakpoint-up(xl) {
-        padding: 0;
-        margin-left: -$grid-gutter-width/2;
-        margin-right: -$grid-gutter-width/2;
-    }
 
     .slideset,
     .slide {
         display: flex;
     }
-    .slide{
+
+    .slide {
         padding: 0 $grid-gutter-width/2;
     }
 
@@ -138,5 +127,20 @@
         .bx-wrapper {
             margin: 0 auto;
         }
+    }
+}
+
+@media (min-width: 992px) {
+    .custom-carousel {
+        margin-bottom: 71px;
+        padding: 0 45px;
+    }
+}
+
+@media (min-width: 1300px) {
+    .custom-carousel {
+        padding: 0;
+        margin-left: -$grid-gutter-width/2;
+        margin-right: -$grid-gutter-width/2;
     }
 }

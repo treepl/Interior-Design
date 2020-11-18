@@ -360,8 +360,8 @@
         display: none!important;
 
         @include media-breakpoint-up(md) {
-            left: -55px;
-            font-size: 45px;
+            left: -40px;
+            font-size: 25px;
             display: block!important;
         }
     }
@@ -379,8 +379,8 @@
         display: none!important;
 
         @include media-breakpoint-up(md) {
-            right: -55px;
-            font-size: 45px;
+            right: -40px;
+            font-size: 25px;
             display: block!important;
         }
     }

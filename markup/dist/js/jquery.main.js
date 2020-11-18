@@ -135,7 +135,7 @@ function initCustomInfoCarousel() {
                       }
                     },
                     {
-                      breakpoint: 520,
+                      breakpoint: 480,
                       settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1
