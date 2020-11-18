@@ -246,7 +246,7 @@
                                         }
                                     }
 
-                                    col.innerHTML = colHtml + fakeItem + `<a href="${item.url}" title="${item.Name.replace(/"/gim, '&#34;')}" class="calendar_table_event"><span>${itemName}</span></a>`;
+                                    col.innerHTML = colHtml + fakeItem + `<a href="${item.Url}" title="${item.Name.replace(/"/gim, '&#34;')}" class="calendar_table_event"><span>${itemName}</span></a>`;
                                 }
 
                                 if (elEndTime < dTime) {

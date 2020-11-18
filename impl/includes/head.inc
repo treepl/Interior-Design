@@ -4,8 +4,10 @@
     <title>{{this['name']}}</title>
 {% endif %}
 <link href="//fonts.googleapis.com/css?family=Muli:400,700" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 <link rel="stylesheet" href="/css/main.min.css">
+{% if si.af.cc.size > 0 %}
+    <link rel="stylesheet" href="{{si.af.cc}}">
+{% endif %}
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">

@@ -186,7 +186,7 @@ window.ResponsiveHelper = (function($){
 	};
 }(jQuery));
 
-/*
+/* 
      _ _      _       _
  ___| (_) ___| | __  (_)___
 / __| | |/ __| |/ /  | / __|

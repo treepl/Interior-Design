@@ -1,7 +1,7 @@
 <footer id="footer" class="bg-dark">
     <div class="container">
         <div class="row">
-            <div class="col-sm-6 col-lg-4 order-md-2  order-lg-1 box">
+            <div class="box col-lg-4 col-sm-12 order-lg-1">
                 <div class="logotype">
                     <a href="/">
                         <img src="{{siteinformation.company_information.logo}}" width="177" alt="{{this.name}}">
@@ -10,7 +10,7 @@
                 <p>{{siteinformation.company_information.footer_info_text}}</p>
                 <a href="/about" class="more">Read more <i class="icon icon-long-arrow-right"></i> </a>
             </div>
-            <div class="col-sm-6 col-lg-4  order-md-1">
+            <div class="col-sm-6 col-lg-4  order-md-1 mb-3 mb-lg-0">
                 <h4 class="h4">Main Links</h4>
                 {% component type: "menu", alias: "footer_menu", layoutGroup: "Default" %}
             </div>

@@ -40,42 +40,25 @@ function initProjectsCarousel() {
     function init(condition) {
         if(condition || condition == null) {
 
-            var _bigSlider = $('.carouselGalleryHolder .imageHolder').bxSlider({
-                mode : 'fade',
-                slideSelector : '.slide',
-                adaptiveHeight : true,
-                pagerCustom : $('.carouselGalleryHolder .thumbnail ul'),
-                controls : false,
-                onSlideAfter : function($slideElement, oldIndex, newIndex)
-                {
-                    $('.carouselGalleryHolder .thumbnail ul li').removeClass('active');
-                    $('.carouselGalleryHolder .thumbnail ul li').eq(newIndex).addClass('active');
-                }
-            });
+            var _bigSlider = $('.carouselGalleryHolder .imageHolder').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                fade: true,
+                asNavFor: '.carouselGalleryHolder .thumbnail ul'
+              });
 
-            var _thumbSlider = $('.carouselGalleryHolder .thumbnail ul').bxSlider({
-                slideMargin : 10, 
-                infiniteLoop : false,
-                pager : false,
-                controls : false,
-                minSlides : 2,
-                maxSlides : 4,
-                touchEnabled: false,
-                moveSlides : 1,
-                slideWidth : 118
-            });
-
-            $('.carouselGalleryHolder .btn-next').click(function() {
-                _thumbSlider.goToNextSlide();
-
-                return false;
-            });
-
-            $('.carouselGalleryHolder .btn-prev').click(function() {
-                _thumbSlider.goToPrevSlide();
-
-                return false;
-            });
+    
+            var _thumbSlider = $('.carouselGalleryHolder .thumbnail ul').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                asNavFor: '.carouselGalleryHolder .imageHolder',
+                dots: false,
+                centerMode: true,
+                prevArrow: '<button class="slick-prev" aria-label="Previous" type="button" tabindex="0"><i class="icon icon-left-arrow"></i> </button>',
+                nextArrow: '<button class="slick-next" aria-label="Next" type="button" tabindex="0"><i class="icon icon-right-arrow"></i></button>',
+                focusOnSelect: true
+              });
         }
     }
 }
@@ -183,7 +166,7 @@ function initCustomTextCarousel() {
                 responsive: [
                     
                     {
-                      breakpoint: 1200,
+                      breakpoint: 992,
                       settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1
@@ -324,7 +307,7 @@ function initComingSoonCountDown() {
     function init(condition) {
         if(condition || condition == null) {
             $('.comingSoonTimerHolder').countdowntimer({
-                dateAndTime : "2019/11/11 00:00:00",
+                dateAndTime : "2020/09/09 00:00:00",
                 size : "lg",
                 regexpMatchFormat : "([0-9]{1,3}):([0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2})",
                 regexpReplaceWith : '<div class="column"> <div class="holder"> <span>$1</span> <p>days</p></div></div><div class="column"> <div class="holder"> <span>$2</span> <p>hours</p></div></div><div class="column"> <div class="holder"> <span>$3</span> <p>minutes</p></div></div><div class="column"> <div class="holder"> <span>$4</span> <p>seconds</p></div></div>'

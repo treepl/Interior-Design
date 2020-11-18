@@ -1,0 +1,7 @@
+{% if this.items != null %}
+<select data-cms_grouped_products_selector onchange="window.cmsGroupedProductsChange(this)">
+    {% for item in this.items %}
+        <option value="{{item.id}}" data-product_url="{{item.Url}}" {% if this.id == item.id %} selected="selected" {% endif %}>{{item.displayName}}</option>
+    {% endfor %}
+</select>
+{% endif %}
