@@ -44,6 +44,7 @@ function initProjectsCarousel() {
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 arrows: false,
+                adaptiveHeight: true,
                 fade: true,
                 asNavFor: '.carouselGalleryHolder .thumbnail ul'
               });

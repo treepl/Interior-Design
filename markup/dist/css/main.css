@@ -7453,6 +7453,8 @@ body.compensate-for-scrollbar {
   transform: translate3d(0, 0, 0); }
 
 .slick-track {
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
   left: 0;
   top: 0;
