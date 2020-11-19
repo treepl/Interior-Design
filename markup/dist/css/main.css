@@ -19001,9 +19001,9 @@ textarea.form-control {
   font-size: 40px;
   z-index: 1;
   display: none !important; }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     .slick-slider .slick-prev {
-      left: -42px;
+      left: -40px;
       font-size: 25px;
       display: block !important; } }
 
@@ -19019,9 +19019,9 @@ textarea.form-control {
   color: #000;
   font-size: 40px;
   display: none !important; }
-  @media (min-width: 768px) {
+  @media (min-width: 992px) {
     .slick-slider .slick-next {
-      right: -42px;
+      right: -40px;
       font-size: 25px;
       display: block !important; } }
 
