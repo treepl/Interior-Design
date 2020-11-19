@@ -360,7 +360,7 @@
         display: none!important;
 
         @include media-breakpoint-up(md) {
-            left: -40px;
+            left: -42px;
             font-size: 25px;
             display: block!important;
         }
@@ -379,7 +379,7 @@
         display: none!important;
 
         @include media-breakpoint-up(md) {
-            right: -40px;
+            right: -42px;
             font-size: 25px;
             display: block!important;
         }

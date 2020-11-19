@@ -19003,7 +19003,7 @@ textarea.form-control {
   display: none !important; }
   @media (min-width: 768px) {
     .slick-slider .slick-prev {
-      left: -40px;
+      left: -42px;
       font-size: 25px;
       display: block !important; } }
 
@@ -19021,7 +19021,7 @@ textarea.form-control {
   display: none !important; }
   @media (min-width: 768px) {
     .slick-slider .slick-next {
-      right: -40px;
+      right: -42px;
       font-size: 25px;
       display: block !important; } }
 
