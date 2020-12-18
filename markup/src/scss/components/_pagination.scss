@@ -1,0 +1,32 @@
+.pagination.system_pagination,
+.pagination {
+    position: absolute;
+    bottom: -50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    li {
+        padding-left: 10px;
+        &::before {
+            display: none;
+        }
+
+        .dots {
+            border: none;
+        }
+    }
+
+    .active a {
+        background-color: #ffa000;
+    }
+
+    a {
+        border: 1px solid #ffa000;
+
+        &:hover {
+            color: $white;
+            background-color: #ffa000;
+        }
+    }
+}

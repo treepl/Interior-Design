@@ -18322,6 +18322,35 @@ button:focus {
 .breadcrumb-item a {
   color: inherit; }
 
+.pagination.system_pagination,
+.pagination {
+  position: absolute;
+  bottom: -50px;
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center; }
+  .pagination.system_pagination li,
+  .pagination li {
+    padding-left: 10px; }
+    .pagination.system_pagination li::before,
+    .pagination li::before {
+      display: none; }
+    .pagination.system_pagination li .dots,
+    .pagination li .dots {
+      border: none; }
+  .pagination.system_pagination .active a,
+  .pagination .active a {
+    background-color: #ffa000; }
+  .pagination.system_pagination a,
+  .pagination a {
+    border: 1px solid #ffa000; }
+    .pagination.system_pagination a:hover,
+    .pagination a:hover {
+      color: #fff;
+      background-color: #ffa000; }
+
 [id="header"] {
   min-height: var(--header-min-height);
   background-color: #222; }
