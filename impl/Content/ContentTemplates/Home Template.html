@@ -1,7 +1,8 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
     <head>
         {% include "/includes/head.inc" %}
+        <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key={{siteinformation.site_information.google_map_api_key}}"></script>
     </head>
     <body>
         <noscript>
@@ -72,7 +73,7 @@
                     </div>
                 </section>
             </main>
-            {% component type: "snippet", alias: "map" %}   
+            {% include "/includes/map.inc" %}   
             {% component type: "snippet", alias: "footer" %}
             {% component type: "snippet", alias: "access_key" %}
         </div>

@@ -1,7 +1,6 @@
-{% component type: "module", source: "Google Map", layout: "", collectionVariable: "map" %}
-
-<section class="map-holder" width="1920" height="615">
-    <div class="google-map-holder" id="mapHolder" style=" height:500px;"></div>
+{% component type: "module", source: "Google Map", layout: "List", collectionVariable: "map" %}
+<section class="map-holder">
+	<div class="google-map-holder" id="mapHolder" style="filter: grayscale(100%);"></div>
 </section>
 <script>
     $(function(){
@@ -17,136 +16,10 @@
             if(condition || condition == null) {
                 var myLatLng = {lat: +'{{map.items[0].LocationLat}}', lng: +'{{map.items[0].LocationLng}}' };
                 var mapOptions = {
-                    zoom: 13,
+                    zoom: 12,
                     center: myLatLng,
                     scrollwheel: false,
-                    styles: 
-                    [
-                            {
-                                "featureType": "administrative",
-                                "elementType": "all",
-                                "stylers": [
-                                    {
-                                        "saturation": "-100"
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "administrative.province",
-                                "elementType": "all",
-                                "stylers": [
-                                    {
-                                        "visibility": "off"
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "landscape",
-                                "elementType": "all",
-                                "stylers": [
-                                    {
-                                        "saturation": -100
-                                    },
-                                    {
-                                        "lightness": 65
-                                    },
-                                    {
-                                        "visibility": "on"
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "poi",
-                                "elementType": "all",
-                                "stylers": [
-                                    {
-                                        "saturation": -100
-                                    },
-                                    {
-                                        "lightness": "50"
-                                    },
-                                    {
-                                        "visibility": "simplified"
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "road",
-                                "elementType": "all",
-                                "stylers": [
-                                    {
-                                        "saturation": "-100"
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "road.highway",
-                                "elementType": "all",
-                                "stylers": [
-                                    {
-                                        "visibility": "simplified"
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "road.arterial",
-                                "elementType": "all",
-                                "stylers": [
-                                    {
-                                        "lightness": "30"
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "road.local",
-                                "elementType": "all",
-                                "stylers": [
-                                    {
-                                        "lightness": "40"
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "transit",
-                                "elementType": "all",
-                                "stylers": [
-                                    {
-                                        "saturation": -100
-                                    },
-                                    {
-                                        "visibility": "simplified"
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "water",
-                                "elementType": "geometry",
-                                "stylers": [
-                                    {
-                                        "hue": "#ffff00"
-                                    },
-                                    {
-                                        "lightness": -25
-                                    },
-                                    {
-                                        "saturation": -97
-                                    }
-                                ]
-                            },
-                            {
-                                "featureType": "water",
-                                "elementType": "labels",
-                                "stylers": [
-                                    {
-                                        "lightness": -25
-                                    },
-                                    {
-                                        "saturation": -100
-                                    }
-                                ]
-                            }
-                    ]
-                    
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
                 };
 
                 var mapElement = document.getElementById('mapHolder');
@@ -169,7 +42,7 @@
                     var marker = new google.maps.Marker({
                         position: {lat: _marker[1], lng: _marker[2]},
                         map: map,
-                        icon: none,
+                        icon: "{{siteinformation.site_information.map_marker}}",
                         title: _marker[0]
                     });
                     latlngbounds.extend(myLatLng);
@@ -178,7 +51,6 @@
                 if(_markers.length > 1) {
                     map.setCenter( latlngbounds.getCenter(), map.fitBounds(latlngbounds));
                 }
-                
             }
         }
     }
