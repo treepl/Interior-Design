@@ -2,9 +2,9 @@
     <div class="container">
 	    <div class="jumbotron jumbotron-fluid text-center">
 	        <div class="text">
-    	        {% if formSubmissionData.error >= 1 %}
+    	        {% if formSubmissionData == "" or formSubmissionData.error >= 1 %}
     	            <h1 class="system_title">Error</h1>
-    		        <p class="system_text">{{formSubmissionData.errormessages}}</p>
+    		        <p class="system_text">{{formSubmissionData.errormessages | default : "The form wasn't submitted"}}</p>
     	        {% else %}
             	    <h2 class="h2">Thank You</h2>
                     <p class="lead">for your submission.</p>
