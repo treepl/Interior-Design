@@ -276,113 +276,116 @@
 													<table width="100%" cellpadding="0" cellspacing="0">
 														<tr>
 															<td align="left" style="vertical-align:top; width:240px;">
-																<table width="100%" cellpadding="0" cell					<table width="100%" cellpadding="0" cellspacing="0">
-												<tr>
-													<td style="background: #f1f1f1;">
-														<table width="100%" cellpadding="0" cellspacing="0">
-															<tr>
-																<td  align="left" style="vertical-align:top;">
-																	<table width="100%" cellpadding="0" cellspacing="0">
-																		<tr>
-																			<td class="plr-10" style="font:bold 14px/21px Tahoma, Arial, sans-serif; color:#444; padding:5px 28px;">
-																				Item
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-																<td width="125"  align="left" style="vertical-align:top;">
-																	<table width="100%" cellpadding="0" cellspacing="0">
-																		<tr>
-																			<td class="plr-10" class="ta-l" align="right" style="font:bold 14px/21px Tahoma, Arial, sans-serif; color:#444; padding:5px 28px;">
-																				Total cost
-																			</td>
-																		</tr>
-																	</table>
-																</td>
-															</tr>
-														</table>
-													</td>
-												</tr>
-												{% assign allFields = this.order.items %}
-												{% for item in allFields %}
-													<tr>
-														<td style="border-bottom: 1px solid #d2d2d2; padding:9px 0;">
-															<table width="100%" cellpadding="0" cellspacing="0">
-																<tr>
-																	<td  align="left" style="vertical-align:top;">
-																		<table width="100%" cellpadding="0" cellspacing="0">
-																			<tr>
-																				<td class="plr-10" style="font:14px/21px Tahoma, Arial, sans-serif; color:#444; padding:5px 28px;">
-																					<b>{{item.name}}</b><br />
-																					{% if item.entityType == "Event" %}
-																						{{item.currency.symbol}}{{item.price}} x {{item.quantity}}<br />
-																						{% component source: "Event", layout: "", filterBy: "id", filterValue:"{{item.entityId}}", limit: "1", collectionVariable: "eventData", type: "module" %}
-																						{{eventData.items[0]['EventDateStart'] | date: "%d-%b-%Y"}}
-																					{% else %}
-																						{{item.currency.symbol}}{{item.price}}<br />
-																					{% endif %}
-																				</td>
-																			</tr>
-																		</table>
-																	</td>
-																	<td width="100"  align="left" style="vertical-align:top;">
-																		<table width="100%" cellpadding="0" cellspacing="0">
-																			<tr>
-																				<td class="plr-10" class="ta-l" align="right" style="font:14px/21px Tahoma, Arial, sans-serif; color:#444; padding:5px 28px;">
-																					{{item.currency.symbol}}{{item.totalCost}}
-																				</td>
-																			</tr>
-																		</table>
-																	</td>
-																</tr>
-															</table>
-														</td>
-													</tr>
-												{% endfor %}
-											</table>
-										</td>
-									</tr>
-									<tr>
-										<td class="plr-10" style="padding:9px 28px 0;">
-											<table width="100%" cellpadding="0" cellspacing="0">
-												<tr>
-													<th class="tflex" align="left" style="vertical-align:top;">
-														<table width="100%" cellpadding="0" cellspacing="0">
-															<tr>
-																<td class="ta-l" align="right" style="font:bold 14px/21px Tahoma, Arial, sans-serif; color:#444; padding:2px 0;">
-																	Total
-																</td>
-															</tr>
-														</table>
-													</th>
-													<th class="tflex" width="10"></th>
-													<th width="100" class="tflex" align="left" style="vertical-align:top;">
-														<table width="100%" cellpadding="0" cellspacing="0">
-															<tr>
-																<td class="ta-l" align="right" style="font:14px/21px Tahoma, Arial, sans-serif; color:#444; padding:2px 0;">
-																	{{this.order.currency.symbol}}{{this.order.TotalCost}}
-																</td>
-															</tr>
-														</table>
-													</th>
-												</tr>
-											</table>
-										</td>
-									</tr>
-								</table>
-							</td>
-						</tr>
-						<tr>
-							<td class="pb-0" style="padding:21px 0; font:12px/18px Tahoma, Arial, sans-serif; color:#999;">
-								Copyright © 2019 All rights reserved.
-							</td>
-						</tr>
-					</table>
-				</td>
-			</tr>
-		</table>
-	</body>
-</html>#444; padding:5px">
+																<table width="100%" cellpadding="0" cellspacing="0">
+																	<tr>
+																		<td class="plr-10" style=" font:bold 14px/21px Tahoma, Arial, sans-serif; color:#444; padding:5px ">
+																			Item
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td align="left" style="vertical-align:top; width:70px;">
+																<table width="100%" cellpadding="0" cellspacing="0">
+																	<tr>
+																		<td class="plr-10" style=" font:bold 14px/21px Tahoma, Arial, sans-serif; color:#444; padding:5px">
+																			Price
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td align="left" style="vertical-align:top; width:70px;">
+																<table width="100%" cellpadding="0" cellspacing="0">
+																	<tr>
+																		<td class="plr-10" style=" font:bold 14px/21px Tahoma, Arial, sans-serif; color:#444; padding:5px">
+																			Tax
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td align="left" style="vertical-align:top; width:70px;">
+																<table width="100%" cellpadding="0" cellspacing="0">
+																	<tr>
+																		<td class="plr-10" style=" font:bold 14px/21px Tahoma, Arial, sans-serif; color:#444; padding:5px ">
+																			Qty
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td width="125" align="left" style="vertical-align:top;">
+																<table width="100%" cellpadding="0" cellspacing="0">
+																	<tr>
+																		<td class="plr-10" class="ta-l" align="right" style="font:bold 14px/21px Tahoma, Arial, sans-serif; color:#444; padding:5px;">
+																			Total
+																		</td>
+																	</tr>
+																</table>
+															</td>
+														</tr>
+													</table>
+												</td>
+											</tr>
+											<!-- row-01 -->
+                                            {% for item in this.order.items %}
+											<tr>
+												<td style="border-bottom: 1px solid #d2d2d2; padding:9px 0;">
+													<table width="100%" cellpadding="0" cellspacing="0">
+														<tr>
+															<td align="left" style="vertical-align:top; width:240px;">
+																<table width="100%" cellpadding="0" cellspacing="0">
+																	<tr>
+																		<td class="plr-10" style="font:14px/21px Tahoma, Arial, sans-serif; color:#444; padding:5px ">
+																		
+																			{% if item.productFileLink == null %}
+																			    <a href="{{this.domain}}{{item.Url}}" ><b>{{item.name}}</b> <br/></a>
+                                                                            {% else %}
+                                                                                <a href="{{item.productFileLink}}">
+																				    <img src="https://webinone.com/images/emails/file-download.png" width="12" style="width:12px; margin-right:3px; vertical-align:top;" alt="Download file" />
+																				    <b >{{item.name}}</b><br/>
+																			    </a>
+                                                                            {% endif %}
+																			
+																			{% for attribute in item.attributes %}
+																			<span style="color: #bdbdbd;">{{attribute.name}}:</span>
+																			{% for option in attribute.options %}
+																			<span style="color: #bdbdbd;">{{option.name}}&nbsp;</span>
+																			{% endfor %}
+																			<br/>
+																			{% endfor %}
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td align="left" style="vertical-align:top;width:70px;">
+																<table width="100%" cellpadding="0" cellspacing="0">
+																	<tr>
+																		<td class="plr-10" style="font:14px/21px Tahoma, Arial, sans-serif; color:#444; padding:5px">
+																			{{item.unitPriceHtml}}
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td align="left" style="vertical-align:top;width:70px;">
+																<table width="100%" cellpadding="0" cellspacing="0">
+																	<tr>
+																		<td class="plr-10" style=" font:14px/21px Tahoma, Arial, sans-serif; color:#444; padding:5px">
+																			{{item.taxPercent}}%
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td align="left" style="vertical-align:top;width:70px;">
+																<table width="100%" cellpadding="0" cellspacing="0">
+																	<tr>
+																		<td class="plr-10" style=" font:14px/21px Tahoma, Arial, sans-serif; color:#444; padding:5px ">
+																			{{item.quantity}}
+																		</td>
+																	</tr>
+																</table>
+															</td>
+															<td width="100" align="left" style="vertical-align:top;">
+																<table width="100%" cellpadding="0" cellspacing="0">
+																	<tr>
+																		<td class="plr-10" class="ta-l" align="right" style=" font:14px/21px Tahoma, Arial, sans-serif; color:#444; padding:5px">
 																			{{item.totalPriceHtml}}
 																		</td>
 																	</tr>
