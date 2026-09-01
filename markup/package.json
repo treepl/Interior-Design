@@ -9,27 +9,35 @@
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
-    "gulp": "^4.0.0",
+    "gulp": "^5.0.1",
     "jquery": "^3.3.1",
-    "pngquant": "^2.0.1",
     "popper.js": "^1.14.7"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.5",
-    "gulp-autoprefixer": "^6.0.0",
-    "gulp-cache": "^1.1.1",
+    "browser-sync": "^3.0.4",
+    "gulp-autoprefixer": "^10.0.0",
     "gulp-clean-css": "^4.0.0",
-    "gulp-imagemin": "^5.0.3",
-    "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.1",
-    "gulp-prettyerror": "^1.2.1",
     "gulp-rename": "^1.4.0",
-    "gulp-rigger": "^0.5.8",
     "gulp-rimraf": "^0.2.2",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.5",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
-    "imagemin-jpeg-recompress": "^6.0.0",
-    "imagemin-pngquant": "^7.0.0"
-  }
+    "sass": "^1.77.8",
+    "sharp": "^0.35.4"
+  },
+  "overrides": {
+    "decode-uri-component": "^0.5.0",
+    "postcss": "^8.5.26"
+  },
+  "browserslist": [
+    "Chrome >= 45",
+    "Firefox ESR",
+    "Edge >= 12",
+    "Explorer >= 10",
+    "iOS >= 9",
+    "Safari >= 9",
+    "Android >= 4.4",
+    "Opera >= 30"
+  ]
 }
